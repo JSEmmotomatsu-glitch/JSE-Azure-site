@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <title>Japan Smart Energy 合同会社 | Japan Smart Energy G.K.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Japan Smart Energy合同会社の公式ホームページです。当社は定置用蓄電システム（ESS）用電極の製造および販売を行っております。神奈川県相模原市から、エネルギーの未来を支える高品質な製品をお届けします。">
+<meta name="description" content="Japan Smart Energy合同会社の公式ホームページです。当社は定置用蓄電システム（ESS）用電極の製造および販売を行っております。神奈川県相模原市から、エネルギー的未来を支える高品質な製品をお届けします。">
 
-<link rel="stylesheet" href="css/style.css">
+<!-- ★ルートパスに変更：先頭にスラッシュを追加してCSS崩れを防止 -->
+<link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -16,13 +17,16 @@
 
 <div id="logo" style="margin: 0; padding: 0; display: flex; align-items: center; gap: 15px;">
     <!-- ロゴマーク -->
-    <a href="index.html" style="display: block; line-height: 0;">
-        <img src="images/logo.png" alt="Japan Smart Energy ロゴ" style="height: 52px; width: auto; display: block;">
+    <!-- ★ルートパスに変更：トップページ（ルート直下）へのリンク -->
+    <a href="/index.html" style="display: block; line-height: 0;">
+        <!-- ★ルートパスに変更：ロゴ画像の読み込み崩れを防止 -->
+        <img src="/images/logo.png" alt="Japan Smart Energy ロゴ" style="height: 52px; width: auto; display: block;">
     </a>
     
     <!-- 会社名テキスト -->
     <h1 style="margin: 0; padding: 0; font-size: 1.4rem; font-weight: 700; line-height: 1.35; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; letter-spacing: 0.02em; text-align: left;">
-        <a href="index.html" style="text-decoration: none; color: #ffffff; display: block; text-align: left;">
+        <!-- ★ルートパスに変更 -->
+        <a href="/index.html" style="text-decoration: none; color: #ffffff; display: block; text-align: left;">
             <span style="display: block; text-align: left; text-indent: 0; padding-left: 0; margin-left: 0;">Japan Smart Energy <span style="font-weight: 700; font-size: 0.85em; margin-left: 1px;">合同会社</span></span>
             <span style="display: block; text-align: left; text-indent: 0; padding-left: 0; margin-left: 0;">Japan Smart Energy <span style="font-weight: 500; font-size: 0.85em; opacity: 0.9; margin-left: 1px;">G.K.</span></span>
         </a>
@@ -36,23 +40,25 @@
 
 <section>
 
-<h2>会社情報</h2>
+<h2>事業内容（作成中）</h2>
 
 <div class="list-normal">
 
 <div class="list">
-<figure><img src="images/1.jpg" alt=""></figure>
+<!-- ★ルートパスに変更：画像表示崩れを防止 -->
+<figure><img src="/images/1.jpg" alt=""></figure>
 <div class="text">
-<h4>トップメッセージ</h4>
-<p></p>
+<h4>定置用蓄電システム（ESS）向け・電極製造事業</h4>
+<p>神奈川県相相模原市を拠点に、定置用蓄電システム（ESS）の核心となる高品質な正極・負極電極シートを供給。AESCジャパンへの製造委託による世界水準の品質と、米Fluence社への売却による強固な収益基盤を確立しています。</p>
 </div>
 </div>
 
 <div class="list">
-<figure><img src="images/1.jpg" alt=""></figure>
+<!-- ★ルートパスに変更：画像表示崩れを防止 -->
+<figure><img src="/images/1.jpg" alt=""></figure>
 <div class="text">
-<h4>会社概要</h4>
-<p></p>
+<h4>スマートシティ＆ITソリューション事業</h4>
+<p>前身の「SmartCityConsulting」時代より培ったノウハウを活かし、次世代の街づくりやスマートハウス、スマート農業、物流、医療テックに関する総合コンサルティングおよびITシステム開発を提供。企業のDX推進や通信インフラの構築など、多角的なビジネスサポートを柔軟に展開しています。</p>
 </div>
 </div>
 
@@ -76,9 +82,10 @@
 
 <nav>
 <ul>
-<li><a href="index.html">ホーム</a></li>
-<li><a href="company.html">会社概要</a></li>
-<li><a href="service.html">事業内容</a></li>
+<!-- ★ルートパスに変更：階層が変わっても正しく移動できるように設定 -->
+<li><a href="/index.html">ホーム</a></li>
+<li><a href="/company/">会社概要</a></li>
+<li><a href="/service.html">事業内容</a></li>
 </ul>
 </nav>
 
@@ -91,7 +98,8 @@
 
 
 <footer>
-<small>Copyright&copy; <a href="index.html">Sample Company</a> All Rights Reserved.</small>
+<!-- ★ルートパスに変更 -->
+<small>Copyright&copy; <a href="/index.html">Sample Company</a> All Rights Reserved.</small>
 <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
 </footer>
 
@@ -117,7 +125,8 @@
 
 
 <!--このテンプレート専用のスクリプト-->
-<script src="js/main.js"></script>
+<!-- ★ルートパスに変更：JavaScriptの読み込み崩れ（スマホ用メニューが動かない等）を防止 -->
+<script src="/js/main.js"></script>
 
 
 </body>
