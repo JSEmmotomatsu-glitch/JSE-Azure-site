@@ -11,61 +11,91 @@
 
 </head>
 <style>
-/* 1画面に収めるためのレイアウト調整 */
+/* 画面幅が広いパソコン環境（900px以上）でのレイアウト調整 */
 @media screen and (min-width: 900px) {
-  /* 全体の並び方をFlexboxにして上段・下段の並びを制御 */
+  /* 会社情報のコンテナ全体をFlexboxにして並べる */
   .list-normal {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px !important; /* 全体の隙間を狭く */
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 25px 15px !important; /* 横の隙間15px、縦の隙間25px */
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
-  /* すべてのカードの基本初期化（既存の幅設定などを上書き） */
+  /* 既存テンプレートの干渉（floatなど）を完全にクリア */
   .list-normal .list {
     margin: 0 !important;
     float: none !important;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+    display: flex !important;
+    box-sizing: border-box !important;
   }
 
-  /* 【上段】1〜3番目（代表あいさつ、経営理念、ビジョン）の3つ並び */
+  /* ===================================================
+     【上段】1〜3番目（代表あいさつ、経営理念、ビジョン）
+     =================================================== */
   .list-normal .list:nth-child(1),
   .list-normal .list:nth-child(2),
   .list-normal .list:nth-child(3) {
-    width: calc((100% - 30px) / 3) !important; /* 3等分 */
+    width: calc((100% - 30px) / 3) !important; /* 横に3つ並べる */
+    flex-direction: column !important; /* 画像の下に文字を配置 */
   }
   
-  /* 上段の画像の高さを低めに抑えて1画面に収める */
+  /* 上段の大きな画像設定 */
+  .list-normal .list:nth-child(-n+3) figure {
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+  }
   .list-normal .list:nth-child(-n+3) figure img {
+    width: 100% !important;
     height: 140px !important;
-    object-fit: cover;
-    width: 100%;
+    object-fit: cover !important;
+  }
+  .list-normal .list:nth-child(-n+3) .text h4 {
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
   }
 
-  /* 【下段】4〜9番目（会社概要〜採用）の6つを小さく横並び */
+  /* ===================================================
+     【下段】4〜9番目（会社概要〜採用）※3つずつの二段組
+     =================================================== */
   .list-normal .list:nth-child(n+4) {
-    width: calc((100% - 75px) / 6) !important; /* 6等分 */
-    padding: 8px !important; /* 内側の余白を小さく */
+    width: calc((100% - 30px) / 3) !important; /* 横に3つ並べる（自動で2段になります） */
+    flex-direction: row !important; /* 画像の右側に文字を配置する「横長ミニカード」 */
+    align-items: center !important; /* 画像と文字の上下中央を揃える */
+    background: rgba(255, 255, 255, 0.08) !important; /* ミニカード風に薄い背景を敷く */
+    border-radius: 4px !important;
+    padding: 8px !important;
   }
 
-  /* 下段は文字とアイコンだけにトグルさせるため画像を非表示にしてコンパクト化 */
+  /* 下段の画像を小さく表示する設定（画像をそのまま残す） */
   .list-normal .list:nth-child(n+4) figure {
-    display: none !important;
+    display: block !important; /* 非表示を解除して表示させる */
+    width: 50px !important; /* 画像の横幅を50pxに制限 */
+    height: 50px !important; /* 縦幅も50pxに制限 */
+    margin: 0 12px 0 0 !important; /* 右側にだけ文字との隙間を作る */
+    flex-shrink: 0 !important; /* 画面が狭くなっても画像が潰れないように固定 */
+  }
+  .list-normal .list:nth-child(n+4) figure img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* 1.jpgを正方形に綺麗に縮小・切り抜き */
+    border-radius: 4px !important;
   }
 
-  /* 下段の文字サイズと余白を小さく調整 */
+  /* 下段の文字サイズと余白の調整 */
   .list-normal .list:nth-child(n+4) .text {
-    padding: 5px 0 0 0 !important;
-    text-align: center;
+    padding: 0 !important;
+    text-align: left !important;
   }
   .list-normal .list:nth-child(n+4) h4 {
-    font-size: 0.85rem !important; /* 文字を小さく */
+    font-size: 0.95rem !important; /* 文字が潰れない読みやすいサイズ */
+    font-weight: bold !important;
+    color: #ffffff !important;
     margin: 0 !important;
-    white-space: nowrap; /* 文字の折り返しを防ぐ */
   }
   .list-normal .list:nth-child(n+4) p {
-    display: none !important; /* 説明文を非表示 */
+    display: none !important; /* 空のpタグによる余計な隙間を消す */
   }
 }
 </style>
