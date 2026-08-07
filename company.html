@@ -7,7 +7,68 @@
 <meta name="description" content="Japan Smart Energy合同会社の公式ホームページです。当社は定置用蓄電システム（ESS）用電極の製造および販売を行っております。神奈川県相模原市から、エネルギーの未来を支える高品質な製品をお届けします。">
 
 <link rel="stylesheet" href="css/style.css">
+
+
 </head>
+<style>
+/* 1画面に収めるためのレイアウト調整 */
+@media screen and (min-width: 900px) {
+  /* 全体の並び方をFlexboxにして上段・下段の並びを制御 */
+  .list-normal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px !important; /* 全体の隙間を狭く */
+  }
+
+  /* すべてのカードの基本初期化（既存の幅設定などを上書き） */
+  .list-normal .list {
+    margin: 0 !important;
+    float: none !important;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  /* 【上段】1〜3番目（代表あいさつ、経営理念、ビジョン）の3つ並び */
+  .list-normal .list:nth-child(1),
+  .list-normal .list:nth-child(2),
+  .list-normal .list:nth-child(3) {
+    width: calc((100% - 30px) / 3) !important; /* 3等分 */
+  }
+  
+  /* 上段の画像の高さを低めに抑えて1画面に収める */
+  .list-normal .list:nth-child(-n+3) figure img {
+    height: 140px !important;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  /* 【下段】4〜9番目（会社概要〜採用）の6つを小さく横並び */
+  .list-normal .list:nth-child(n+4) {
+    width: calc((100% - 75px) / 6) !important; /* 6等分 */
+    padding: 8px !important; /* 内側の余白を小さく */
+  }
+
+  /* 下段は文字とアイコンだけにトグルさせるため画像を非表示にしてコンパクト化 */
+  .list-normal .list:nth-child(n+4) figure {
+    display: none !important;
+  }
+
+  /* 下段の文字サイズと余白を小さく調整 */
+  .list-normal .list:nth-child(n+4) .text {
+    padding: 5px 0 0 0 !important;
+    text-align: center;
+  }
+  .list-normal .list:nth-child(n+4) h4 {
+    font-size: 0.85rem !important; /* 文字を小さく */
+    margin: 0 !important;
+    white-space: nowrap; /* 文字の折り返しを防ぐ */
+  }
+  .list-normal .list:nth-child(n+4) p {
+    display: none !important; /* 説明文を非表示 */
+  }
+}
+</style>
 
 <body>
 
