@@ -77,12 +77,8 @@
 
 <h3>MENU</h3>
 
-<nav>
-<ul>
-<li><a href="./">ホーム</a></li>
-<li><a href="company">会社情報</a></li>
-<li><a href="service">事業内容</a></li>
-</ul>
+<nav id="common-menu">
+<!-- MENUはmenu.htmlで定義 -->
 </nav>
 
 </div>
@@ -121,7 +117,20 @@
 
 <!--このテンプレート専用のスクリプト-->
 <script src="js/main.js"></script>
-
+<!-- ▼ ここから下を貼り付けます ▼ -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const menuArea = document.getElementById("common-menu");
+    if (menuArea) {
+        fetch("menu.html")
+            .then(response => response.text())
+            .then(data => {
+                menuArea.innerHTML = data;
+            });
+    }
+});
+</script>
+<!-- ▲ ここまで ▲ -->
 
 </body>
 </html>
