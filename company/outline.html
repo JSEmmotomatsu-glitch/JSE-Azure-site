@@ -115,13 +115,8 @@
 
 <h3>MENU</h3>
 
-<nav>
-<ul>
-<!-- ★ルートパスに変更：どの階層からでも確実に飛べるように調整 -->
-<li><a href="/index.html">ホーム</a></li>
-<li><a href="/company/">会社概要</a></li>
-<li><a href="/service.html">事業内容</a></li>
-</ul>
+<nav id="common-menu">
+<!-- MENUはmenu.htmlで定義 -->
 </nav>
 
 </div>
@@ -162,6 +157,22 @@
 <!--このテンプレート専用のスクリプト-->
 <!-- ★ルートパスに変更：スマホメニューなどの動作不良を防止 -->
 <script src="/js/main.js"></script>
+
+<!-- ▼ ここから下を貼り付けます ▼ -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const menuArea = document.getElementById("common-menu");
+    if (menuArea) {
+        fetch("/menu.html")
+            .then(response => response.text())
+            .then(data => {
+                menuArea.innerHTML = data;
+            });
+    }
+});
+</script>
+<!-- ▲ ここまで ▲ -->
+
 
 
 </body>
