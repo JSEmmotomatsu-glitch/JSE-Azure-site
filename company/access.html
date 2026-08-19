@@ -49,14 +49,15 @@
 <section>
 
 <h2>アクセス</h2>
-<!-- ▼ シンプルに文字だけを表示する修正コード ▼ -->
+<h2>アクセス</h2>
+<!-- ▼ 本社を上向き・相模原を下向きに分けたコード ▼ -->
 <div class="map-interactive-container" style="position: relative; width: 100%; max-width: 800px; margin: 30px auto; font-family: sans-serif;">
     
     <!-- 日本地図画像 -->
     <img src="/images/map.jpg" alt="日本地図" style="width: 100%; height: auto; display: block;">
 
     <style>
-        /* 吹き出しのシンプルスタイル */
+        /* 共通スタイル */
         .map-label {
             position: absolute;
             background-color: #ffffff;
@@ -69,8 +70,33 @@
             white-space: nowrap;
             z-index: 5;
         }
-        /* 吹き出しの三角部分 */
-        .map-label::after {
+
+        /* ーーー ① 本社（上向き：三角が上で文字が下） ーーー */
+        #label-hq {
+            /* 三角の【上先端】を基準に配置 */
+            transform: translate(-50%, 0);
+            margin-top: 6px; 
+        }
+        /* 本社：上側の三角 */
+        #label-hq::after {
+            content: "";
+            position: absolute;
+            bottom: 100%; /* 下ではなく上に配置 */
+            left: 50%;
+            margin-left: -6px;
+            border-width: 6px;
+            border-style: solid;
+            border-color: transparent transparent #ffffff transparent; /* 上を向く三角 */
+        }
+
+        /* ーーー ② 相模原工場（下向き：文字が上で三角が下） ーーー */
+        #label-factory {
+            /* 三角の【下先端】を基準に配置 */
+            transform: translate(-50%, -100%);
+            margin-top: -6px; 
+        }
+        /* 相模原：下側の三角 */
+        #label-factory::after {
             content: "";
             position: absolute;
             top: 100%;
@@ -78,17 +104,19 @@
             margin-left: -6px;
             border-width: 6px;
             border-style: solid;
-            border-color: #ffffff transparent transparent transparent;
+            border-color: #ffffff transparent transparent transparent; /* 下を向く三角 */
         }
     </style>
 
-    <!-- ① 本社位置 -->
-    <div class="map-label" style="left: 15%; top: 73%;">
+    <!-- ① 本社位置（上向き） -->
+    <!-- ※三角の「上の頂点」がこの left/top の位置にピタッと合います -->
+    <div id="label-hq" class="map-label" style="left: 18.5%; top: 81.5%;">
         本社
     </div>
 
-    <!-- ② 相模原工場位置 -->
-    <div class="map-label" style="left: 58%; top: 58%;">
+    <!-- ② 相模原工場位置（下向き） -->
+    <!-- ※三角の「下の頂点」がこの left/top の位置にピタッと合います -->
+    <div id="label-factory" class="map-label" style="left: 58.2%; top: 58.2%;">
         相模原工場
     </div>
 
