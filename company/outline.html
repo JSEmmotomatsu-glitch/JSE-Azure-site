@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Japan Smart Energy 合同会社 | Japan Smart Energy G.K.</title>
+<!-- ▼ 後日、一般公開するときはこの1行を丸ごと削除する ▼ -->
+<meta name="robots" content="noindex">
+<!-- ▲ ここまで ▲ -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Japan Smart Energy合同会社の公式ホームページです。当社は定置用蓄電システム（ESS）用電極の製造および販売を行っております。神奈川県相模原市から、エネルギーの未来を支える高品質な製品をお届けします。">
 
-<!-- ★ルートパスに変更：CSSの崩れを防止 -->
+<!-- ★ルートパスに変更してCSSの崩れを防止 -->
 <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -15,13 +18,10 @@
 
 <div id="container">
 
-<header>
-
 <div id="logo" style="margin: 0; padding: 0; display: flex; align-items: center; gap: 15px;">
     <!-- ロゴマーク -->
-    <!-- ★ルートパスに変更：トップページ（ルート直下）へのリンク -->
+    <!-- ★ルートパスに変更 -->
     <a href="/index.html" style="display: block; line-height: 0;">
-        <!-- ★ルートパスに変更：ロゴ画像の読み込み崩れを防止 -->
         <img src="/images/logo.png" alt="Japan Smart Energy ロゴ" style="height: 52px; width: auto; display: block;">
     </a>
     
@@ -34,9 +34,6 @@
         </a>
     </h1>
 </div>
-
-</header>
-
 
 <div id="contents">
 
@@ -100,9 +97,68 @@
 </tr>
 </table>
 
-
-
 </section>
+
+
+<!-- =======================================================
+     🗺️ 【新規追加】アクセス（日本地図・Googleマップ動的切り替え）
+     ======================================================= -->
+<section>
+    <h2>アクセス</h2>
+    <div class="jse-access-wrapper">
+        <div class="jse-flex-container">
+            
+            <!-- 左側：日本地図エリア -->
+            <div class="jse-map-selector">
+                <h3 class="jse-title">拠点を選択してください</h3>
+                <svg class="jse-japan-svg" viewBox="0 0 500 400" xmlns="http://w3.org">
+                    <rect width="500" height="400" fill="#fcfcfc" stroke="#e0e0e0" stroke-width="1" rx="8"/>
+                    <text x="250" y="35" text-anchor="middle" fill="#888888" font-size="14" font-family="sans-serif">都道府県をクリックして切り替え</text>
+                    
+                    <!-- 神奈川県（関東エリア） -->
+                    <g class="jse-pref-btn jse-active" id="jse-btn-kanagawa">
+                        <rect x="340" y="190" width="70" height="45" rx="6" />
+                        <text x="375" y="217" fill="#ffffff" text-anchor="middle" font-size="13" font-weight="bold" font-family="sans-serif">神奈川県</text>
+                    </g>
+
+                    <!-- 長崎県（九州エリア） -->
+                    <g class="jse-pref-btn jse-active" id="jse-btn-nagasaki">
+                        <rect x="90" y="270" width="70" height="45" rx="6" />
+                        <text x="125" y="297" fill="#ffffff" text-anchor="middle" font-size="13" font-weight="bold" font-family="sans-serif">長崎県</text>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- 右側：Googleマップ表示エリア -->
+            <div class="jse-gmap-display">
+                <h3 class="jse-title" id="jse-location-title">本社（長崎県長崎市）</h3>
+                <div class="jse-iframe-container">
+                    <iframe id="jse-gmap-iframe" src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="jse-info-box" id="jse-location-desc">
+                    〒850-0065 長崎県長崎市入船町130番
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- マップ専用スタイル（他のCSSと完全に分離） -->
+<style>
+    .jse-access-wrapper { width: 100% !important; max-width: 1000px !important; margin: 20px auto !important; box-sizing: border-box !important; }
+    .jse-flex-container { display: flex !important; flex-wrap: wrap !important; gap: 30px !important; }
+    .jse-map-selector, .jse-gmap-display { flex: 1 !important; min-width: 290px !important; }
+    .jse-title { font-size: 16px !important; font-weight: bold !important; margin-bottom: 12px !important; border: none !important; padding: 0 !important; color: #fff !important; }
+    .jse-japan-svg { width: 100% !important; height: auto !important; }
+    .jse-pref-btn rect { fill: #dddddd; transition: fill 0.2s ease; }
+    .jse-pref-btn.jse-active rect { fill: #1e3a8a; cursor: pointer; }
+    .jse-pref-btn.jse-active:hover rect { fill: #3b82f6; }
+    .jse-iframe-container { position: relative !important; width: 100% !important; padding-top: 70% !important; }
+    .jse-iframe-container iframe { position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; border: 1px solid #444 !important; border-radius: 6px !important; }
+    .jse-info-box { margin-top: 15px !important; padding: 12px !important; background-color: #222222 !important; border-left: 4px solid #3b82f6 !important; font-size: 14px !important; color: #dddddd !important; border-radius: 0 4px 4px 0 !important; }
+</style>
+
 
 </main>
 
@@ -112,13 +168,9 @@
 
 <h3>MENU</h3>
 
-<nav>
-<ul>
-<!-- ★ルートパスに変更：どの階層からでも確実に飛べるように調整 -->
-<li><a href="/index.html">ホーム</a></li>
-<li><a href="/company/">会社概要</a></li>
-<li><a href="/service.html">事業内容</a></li>
-</ul>
+<!-- ★他ページ共通のメニュー読み込み先 -->
+<nav id="common-menu">
+<!-- MENUはmenu.htmlで定義 -->
 </nav>
 
 </div>
@@ -130,8 +182,7 @@
 
 
 <footer>
-<!-- ★ルートパスに変更 -->
-<small>Copyright&copy; <a href="/index.html">Sample Company</a> All Rights Reserved.</small>
+<small>Copyright&copy; <a href="/index.html">Japan Smart Energy 合同会社</a> All Rights Reserved.</small>
 <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
 </footer>
 
@@ -157,9 +208,27 @@
 
 
 <!--このテンプレート専用のスクリプト-->
-<!-- ★ルートパスに変更：スマホメニューなどの動作不良を防止 -->
+<!-- ★ルートパスに変更 -->
 <script src="/js/main.js"></script>
 
 
-</body>
-</html>
+<!-- ▼ 共通メニュー読み込み ＆ マップ切り替え JavaScript ▼ -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. menu.html からのメニュー読み込み
+    const menuArea = document.getElementById("common-menu");
+    if (menuArea) {
+        // ★他階層からでも確実に引っ張れるようルートパスでfetch
+        fetch("/menu.html")
+            .then(response => response.text())
+            .then(data => {
+                menuArea.innerHTML = data;
+            })
+            .catch(err => console.error("Menu load error:", err));
+    }
+
+    // 2. 日本地図・Googleマップの切り替え制御
+    const jseLocations = {
+        nagasaki: {
+            title: "本社（長崎県長崎市）",
+            desc: "〒850-0065 長崎県長崎市入船町130番",
