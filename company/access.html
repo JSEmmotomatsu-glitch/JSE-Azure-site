@@ -49,11 +49,11 @@
 <section>
 
 <h2>アクセス</h2>
-<!-- ▼ ここからコピー ▼ -->
+<!-- ▼ 絶対パス（URL指定）に修正したコード ▼ -->
 <div class="map-interactive-container" style="position: relative; width: 100%; max-width: 800px; margin: 30px auto; font-family: sans-serif;">
     
-    <!-- 日本地図画像（map.jpgに変更） -->
-    <img src="/images/map.jpg" alt="日本地図" style="width: 100%; height: auto; display: block;">
+    <!-- 日本地図画像を完全なURLで指定 -->
+    <img src="https://japan-smart-energy.co.jp" alt="日本地図" style="width: 100%; height: auto; display: block;" onerror="this.src='/images/map.jpg';">
 
     <style>
         /* 吹き出しの基本スタイル */
@@ -106,23 +106,20 @@
         }
     </style>
 
-    <!-- ① 本社（長崎県側：HQ.jpgを表示） -->
+    <!-- ① 本社（HQ.jpg） -->
     <div class="map-tooltip" style="left: 17%; top: 76%;">
         本社
-        <img class="map-popup-img" src="/images/HQ.jpg" alt="本社マップ">
+        <img class="map-popup-img" src="https://japan-smart-energy.co.jp" alt="本社マップ" onerror="this.src='/images/HQ.jpg';">
     </div>
 
-    <!-- ② 相模原工場（神奈川県側：Sagamihara.jpgを表示） -->
+    <!-- ② 相模原工場（Sagamihara.jpg） -->
     <div class="map-tooltip" style="left: 63%; top: 62%;">
         相模原工場
-        <img class="map-popup-img" src="/images/Sagamihara.jpg" alt="相模原工場マップ">
+        <img class="map-popup-img" src="https://japan-smart-energy.co.jp" alt="相模原工場マップ" onerror="this.src='/images/Sagamihara.jpg';">
     </div>
 
 </div>
-<!-- ▲ ここまでコピー ▲ -->
-
-
-
+<!-- ▲ ここまで ▲ -->
 
 </section>
 
