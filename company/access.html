@@ -85,7 +85,8 @@
             margin-left: -6px;
             border-width: 6px;
             border-style: solid;
-            border-color: transparent transparent #ffffff transparent; /* 上を向く三角 */
+            /* 【修正】上を向く三角の「底辺」の色を、背景と同じ薄緑（#a3d9a5）に指定 */
+            border-color: transparent transparent #a3d9a5 transparent;
         }
 
         /* ーーー ② 相模原工場（下向き：文字が上で三角が下） ーーー */
@@ -103,7 +104,8 @@
             margin-left: -6px;
             border-width: 6px;
             border-style: solid;
-            border-color: #ffffff transparent transparent transparent; /* 下を向く三角 */
+            /* 【修正】下を向く三角の「上辺」の色を、背景と同じ薄緑（#a3d9a5）に指定 */
+            border-color: #a3d9a5 transparent transparent transparent;
         }
     </style>
 
@@ -115,7 +117,7 @@
 
     <!-- ② 相模原工場位置（下向き） -->
     <!-- ※三角の「下の頂点」がこの left/top の位置にピタッと合います -->
-    <div id="label-factory" class="map-label" style="left: 58%; top: 58%;">
+    <div id="label-factory" class="map-label" style="left: 60%; top: 60%;">
         相模原工場
     </div>
 
