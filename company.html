@@ -270,7 +270,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const menuArea = document.getElementById("common-menu");
     if (menuArea) {
-        fetch("menu.html")
+        fetch("/menu.html")
             .then(response => response.text())
             .then(data => {
                 menuArea.innerHTML = data;
