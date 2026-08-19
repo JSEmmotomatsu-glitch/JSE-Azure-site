@@ -49,7 +49,77 @@
 <section>
 
 <h2>アクセス</h2>
+<!-- ▼ ここからコピー ▼ -->
+<div class="map-interactive-container" style="position: relative; width: 100%; max-width: 800px; margin: 30px auto; font-family: sans-serif;">
+    
+    <!-- 日本地図画像（map.jpgに変更） -->
+    <img src="/images/map.jpg" alt="日本地図" style="width: 100%; height: auto; display: block;">
 
+    <style>
+        /* 吹き出しの基本スタイル */
+        .map-tooltip {
+            position: absolute;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 8px 14px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            white-space: nowrap;
+            transition: background-color 0.2s;
+        }
+        .map-tooltip:hover {
+            background-color: #f0f0f0;
+        }
+        /* 吹き出しの三角部分 */
+        .map-tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -6px;
+            border-width: 6px;
+            border-style: solid;
+            border-color: #ffffff transparent transparent transparent;
+        }
+
+        /* ホバー時に浮き出るGoogleマップ画像のスタイル */
+        .map-popup-img {
+            display: none;
+            position: absolute;
+            bottom: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border: 3px solid #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+            z-index: 10;
+        }
+        /* カーソルを合わせた時にマップ画像を表示 */
+        .map-tooltip:hover .map-popup-img {
+            display: block;
+        }
+    </style>
+
+    <!-- ① 本社（長崎県側：HQ.jpgを表示） -->
+    <div class="map-tooltip" style="left: 17%; top: 76%;">
+        本社
+        <img class="map-popup-img" src="/images/HQ.jpg" alt="本社マップ">
+    </div>
+
+    <!-- ② 相模原工場（神奈川県側：Sagamihara.jpgを表示） -->
+    <div class="map-tooltip" style="left: 63%; top: 62%;">
+        相模原工場
+        <img class="map-popup-img" src="/images/Sagamihara.jpg" alt="相模原工場マップ">
+    </div>
+
+</div>
+<!-- ▲ ここまでコピー ▲ -->
 
 
 
