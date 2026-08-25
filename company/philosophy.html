@@ -45,28 +45,58 @@
 
 <main>
 
-<!-- ★完成イメージのサイズ感に合わせ、画像の上にテキストを重ねる高機能ブロック -->
-<div style="position: relative; width: 100%; max-width: 100%; margin: 0 auto; overflow: hidden; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.25); line-height: 0;">
+<!-- ★サイバー・フューチャー感を完全再現するメインコンテナ -->
+<div style="position: relative; width: 100%; max-width: 100%; margin: 0 auto; overflow: hidden; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.25); line-height: 0; background-color: #0b2211;">
 
-    <!-- 背景として広がるイメージ画像 -->
-    <img src="/images/philosophy.png" alt="クリーンかつグリーンな電極製造現場的イメージ" style="width: 100%; height: auto; display: block; filter: brightness(60%) contrast(105%);">
+    <!-- 右側：背景として広がるイメージ画像（明るさをキープして右配置） -->
+    <div style="width: 100%; display: flex; justify-content: flex-end;">
+        <img src="/images/philosophy.png" alt="クリーンかつグリーンな電極製造現場的イメージ" style="width: 60%; min-width: 300px; height: auto; display: block; filter: brightness(90%) contrast(100%);">
+    </div>
 
-    <!-- 画像の左側に重ねる黒いグラデーション（完成イメージの文字の読みやすさを完全に再現） -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%); pointer-events: none;"></div>
+    <!-- 左側から中央：背景の暗い緑グラデーション（文字をくっきり見せるベース） -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, #0b2211 0%, #0b2211 40%, rgba(11,34,17,0.7) 55%, rgba(11,34,17,0) 75%); pointer-events: none; z-index: 1;"></div>
 
-    <!-- 画像の上に重なるテキストエリア（全体のバランスに合わせた余白調整） -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 4% 6%; box-sizing: border-box; line-height: normal;">
+    <!-- 【再現①】左下の緑色の光るグリッドライン（遠近感のあるサイバーな図） -->
+    <div style="position: absolute; bottom: 0; left: 0; width: 50%; height: 25%; z-index: 2; pointer-events: none; overflow: hidden; opacity: 0.85;">
+        <div style="position: absolute; bottom: -50px; left: -10%; width: 120%; height: 200px; background-image: linear-gradient(0deg, transparent 24%, rgba(0, 255, 128, 0.4) 25%, rgba(0, 255, 128, 0.4) 26%, transparent 27%, transparent 74%, rgba(0, 255, 128, 0.4) 75%, rgba(0, 255, 128, 0.4) 76%, transparent 77%), linear-gradient(90deg, transparent 24%, rgba(0, 255, 128, 0.4) 25%, rgba(0, 255, 128, 0.4) 26%, transparent 27%, transparent 74%, rgba(0, 255, 128, 0.4) 75%, rgba(0, 255, 128, 0.4) 76%, transparent 77%); background-size: 40px 40px; transform: perspective(120px) rotateX(65deg); transform-origin: bottom center;"></div>
+        <!-- ネオンの光が地面に反射しているようなボカシ効果 -->
+        <div style="position: absolute; bottom: 0; left: 10%; width: 80%; height: 4px; background: #00ff80; box-shadow: 0 0 15px #00ff80, 0 0 30px #00ff80;"></div>
+    </div>
+
+    <!-- 前面：テキストおよび飾り枠エリア（全体に重ねる） -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 4% 5%; box-sizing: border-box; line-height: normal; z-index: 3;">
         
-        <!-- 経営理念タイトル -->
-        <h2 style="font-size: clamp(1.4rem, 3.5vw, 2.2rem); margin: 0 0 15px 0; border-bottom: none; padding-bottom: 0; color: #ffffff; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5); font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;">
+        <!-- 経営理念タイトル（グラデーションをかけたような立体的な金属風テキスト） -->
+        <h2 style="font-size: clamp(1.8rem, 4.5vw, 2.8rem); margin: 0 0 5px 0; border-bottom: none; padding-bottom: 0; color: #e0e8e3; font-weight: 700; font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; text-shadow: 2px 2px 0px #000, -1px -1px 0px #fff, 0 4px 10px rgba(0,0,0,0.8); letter-spacing: 0.05em;">
             経営理念
-            <span style="font-size: 0.45em; font-weight: normal; color: #cccccc; display: block; margin-top: 4px; font-family: Arial, sans-serif; letter-spacing: 0.05em;">Corporate Philosophy</span>
+            <span style="font-size: 0.35em; font-weight: 500; color: #a1b5a9; display: block; margin-top: 2px; font-family: Arial, sans-serif; letter-spacing: 0.05em; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Corporate Philosophy</span>
         </h2>
         
-        <!-- 経営理念本文（左側の白いアクセント線を維持） -->
-        <p style="font-size: clamp(0.95rem, 2.2vw, 1.4rem); font-weight: bold; line-height: 1.6; color: #ffffff; margin: 0; padding: 6px 0 6px 15px; border-left: 5px solid #ffffff; letter-spacing: 0.03em; max-width: 80%; text-shadow: 0 2px 6px rgba(0,0,0,0.7);">
-            製品品質を最優先に、計画的かつ着実な管理の下、継続的な改善を行うことで高い信頼に応える
-        </p>
+        <!-- 理念本文ブロック（幅を左側に絞る） -->
+        <div style="max-width: 48%; display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+            
+            <!-- 【再現②】1行目：立体的な白いプレート状の飾り枠 -->
+            <div style="background: linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%); padding: 6px 14px; border-radius: 3px; box-shadow: 2px 2px 5px rgba(0,0,0,0.5), inset 0 1px 0 #fff; border-bottom: 2px solid #b5b5b5;">
+                <p style="font-size: clamp(0.95rem, 2vw, 1.25rem); font-weight: 900; color: #112618; margin: 0; letter-spacing: 0.02em; white-space: nowrap;">
+                    製品品質を最優先に、計画的かつ着実な
+                </p>
+            </div>
+
+            <!-- 【再現②】2行目：立体的な白いプレート状の飾り枠 -->
+            <div style="background: linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%); padding: 6px 14px; border-radius: 3px; box-shadow: 2px 2px 5px rgba(0,0,0,0.5), inset 0 1px 0 #fff; border-bottom: 2px solid #b5b5b5; align-self: flex-start;">
+                <p style="font-size: clamp(0.95rem, 2vw, 1.25rem); font-weight: 900; color: #112618; margin: 0; letter-spacing: 0.02em; white-space: nowrap;">
+                    管理の下、継続的な改善を行うこと
+                </p>
+            </div>
+
+            <!-- 【再現②】3行目：立体的な白いプレート状の飾り枠 -->
+            <div style="background: linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%); padding: 6px 14px; border-radius: 3px; box-shadow: 2px 2px 5px rgba(0,0,0,0.5), inset 0 1px 0 #fff; border-bottom: 2px solid #b5b5b5; align-self: flex-start;">
+                <p style="font-size: clamp(0.95rem, 2vw, 1.25rem); font-weight: 900; color: #112618; margin: 0; letter-spacing: 0.02em; white-space: nowrap;">
+                    で高い信頼に応える
+                </p>
+            </div>
+
+        </div>
         
     </div>
 
@@ -76,8 +106,6 @@
 <p style="margin: 8px 0 0 0; padding: 0; font-size: 0.7rem; color: #aaaaaa; text-align: right; line-height: 1.2;">※画像はイメージです</p>
 
 </main>
-
-
 
 
 <!--開閉ブロック-->
