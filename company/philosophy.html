@@ -43,30 +43,37 @@
 
 <div id="contents">
 
-
 <main>
 
-<!-- ★メイン領域の中だけで文字と画像を横並び（Flexbox）にし、最大幅を制限 -->
-<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; max-width: 100%; margin: 10px auto;">
+<!-- ★完成イメージのサイズ感に合わせ、画像の上にテキストを重ねる高機能ブロック -->
+<div style="position: relative; width: 100%; max-width: 100%; margin: 0 auto; overflow: hidden; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.25); line-height: 0;">
 
-    <!-- 左側：テキストエリア（幅を均等に分け、文字の大きさを強調） -->
-    <div style="flex: 1; min-width: 250px;">
-        <h2 style="font-size: 1.7rem; margin-bottom: 15px; border-bottom: none; padding-bottom: 0;">経営理念<span style="font-size: 0.50em; font-weight: normal; color: #dddddd; display: block; margin-top: 5px; font-family: Arial, sans-serif; letter-spacing: 0.05em;">Corporate Philosophy</span></h2>
+    <!-- 背景として広がるイメージ画像 -->
+    <img src="/images/philosophy.png" alt="クリーンかつグリーンな電極製造現場的イメージ" style="width: 100%; height: auto; display: block; filter: brightness(60%) contrast(105%);">
+
+    <!-- 画像の左側に重ねる黒いグラデーション（完成イメージの文字の読みやすさを完全に再現） -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%); pointer-events: none;"></div>
+
+    <!-- 画像の上に重なるテキストエリア（全体のバランスに合わせた余白調整） -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 4% 6%; box-sizing: border-box; line-height: normal;">
         
-        <!-- 送っていただいたキャプチャのサイズ感に合わせて太さとサイズを維持 -->
-        <p style="font-size: 1.3rem; font-weight: bold; line-height: 1.7; color: #ffffff; margin: 20px 0; padding: 5px 0 5px 12px; border-left: 5px solid #ffffff; letter-spacing: 0.02em;">
-        製品品質を最優先に、計画的かつ着実な管理の下、継続的な改善を行うことで高い信頼に応える
+        <!-- 経営理念タイトル -->
+        <h2 style="font-size: clamp(1.4rem, 3.5vw, 2.2rem); margin: 0 0 15px 0; border-bottom: none; padding-bottom: 0; color: #ffffff; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5); font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;">
+            経営理念
+            <span style="font-size: 0.45em; font-weight: normal; color: #cccccc; display: block; margin-top: 4px; font-family: Arial, sans-serif; letter-spacing: 0.05em;">Corporate Philosophy</span>
+        </h2>
+        
+        <!-- 経営理念本文（左側の白いアクセント線を維持） -->
+        <p style="font-size: clamp(0.95rem, 2.2vw, 1.4rem); font-weight: bold; line-height: 1.6; color: #ffffff; margin: 0; padding: 6px 0 6px 15px; border-left: 5px solid #ffffff; letter-spacing: 0.03em; max-width: 80%; text-shadow: 0 2px 6px rgba(0,0,0,0.7);">
+            製品品質を最優先に、計画的かつ着実な管理の下、継続的な改善を行うことで高い信頼に応える
         </p>
-    </div>
-
-    <!-- 右側：画像エリア（大きくなりすぎないよう制限） -->
-    <div style="flex: 1; min-width: 250px; line-height: 0;">
-        <img src="/images/philosophy.png" alt="クリーンかつグリーンな電極製造現場的イメージ" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
-        <!-- 誤解を防ぐための注記 -->
-        <p style="margin: 6px 0 0 0; padding: 0; font-size: 0.7rem; color: #aaaaaa; text-align: right; line-height: 1.2;">※画像はイメージです</p>
+        
     </div>
 
 </div>
+
+<!-- 誤解を防ぐための注記（枠の外の右下に配置） -->
+<p style="margin: 8px 0 0 0; padding: 0; font-size: 0.7rem; color: #aaaaaa; text-align: right; line-height: 1.2;">※画像はイメージです</p>
 
 </main>
 
