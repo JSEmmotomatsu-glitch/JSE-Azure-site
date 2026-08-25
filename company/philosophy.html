@@ -48,62 +48,12 @@
 
 <section>
 
-<h2>経営理念</h2>
+<h2>経営理念<span style="font-size: 0.55em; font-weight: normal; color: #dddddd; display: block; margin-top: 5px; font-family: Arial, sans-serif; letter-spacing: 0.05em;">Corporate Philosophy</span></h2>
 
-<table class="ta1">
-<tr>
-<th style="vertical-align: top; padding-top: 15px;">
-<strong style="font-size: 1.05rem; color: #ffffff; display: block; line-height: 1.2;">会社名</strong>
-<span style="font-size: 0.85em; font-weight: normal; color: #dddddd; display: block; margin-top: 4px;">Company Name</span>
-</th>
-<td>
-<strong style="font-size: 1.1em; color: #ffffff;">Japan Smart Energy 合同会社</strong><br>
-<span style="font-size: 0.9em; color: #dddddd;">Japan Smart Energy G.K.</span>
-</td>
-</tr>
-<tr>
-<th style="vertical-align: top; padding-top: 15px;">
-<strong style="font-size: 1.05rem; color: #ffffff; display: block; line-height: 1.2;">本社</strong>
-<span style="font-size: 0.85em; font-weight: normal; color: #dddddd; display: block; margin-top: 4px;">Head Office</span>
-</th>
-<td>
-<strong style="color: #ffffff;">〒850-0065 長崎県長崎市入船町130番</strong><br>
-<span style="font-size: 0.9em; color: #dddddd;">130 Irifune-machi, Nagasaki-shi, Nagasaki 850-0065, Japan</span>
-</td>
-</tr>
-<tr>
-<th style="vertical-align: top; padding-top: 15px;">
-<strong style="font-size: 1.05rem; color: #ffffff; display: block; line-height: 1.2;">製造・販売拠点</strong>
-<span style="font-size: 0.85em; font-weight: normal; color: #dddddd; display: block; margin-top: 4px;">Operation Center</span>
-</th>
-<td>
-<strong style="color: #ffffff;">〒252-0254 神奈川県相模原市中央区下九沢1120</strong><br>
-<span style="font-size: 0.9em; color: #dddddd;">1120 Shimokuzawa, Chuo-ku, Sagamihara-shi, Kanagawa 252-0254, Japan</span>
-</td>
-</tr>
-<tr>
-<th style="vertical-align: top; padding-top: 15px;">
-<strong style="font-size: 1.05rem; color: #ffffff; display: block; line-height: 1.2;">代表社員</strong>
-<span style="font-size: 0.85em; font-weight: normal; color: #dddddd; display: block; margin-top: 4px;">Representative</span>
-</th>
-<td>
-<strong style="color: #ffffff;">森脇 誠治</strong><br>
-<span style="font-size: 0.9em; color: #dddddd;">Seiji Moriwaki</span>
-</td>
-</tr>
-<tr>
-<th style="vertical-align: top; padding-top: 15px;">
-<strong style="font-size: 1.05rem; color: #ffffff; display: block; line-height: 1.2;">事業内容</strong>
-<span style="font-size: 0.85em; font-weight: normal; color: #dddddd; display: block; margin-top: 4px;">Business Outline</span>
-</th>
-<td>
-<strong style="color: #ffffff;">ESS用電極の製造・販売</strong><br>
-<span style="font-size: 0.9em; color: #dddddd;">Production and sales of electrode for ESS</span>
-</td>
-</tr>
-</table>
-
-
+<!-- ★経営理念の文章を配置（文字が引き立つよう少し大きめ・太めにスタイリングしています） -->
+<p style="font-size: 1.15rem; font-weight: bold; line-height: 1.8; color: #ffffff; margin: 30px 0; padding: 0 10px; border-left: 4px solid #ffffff;">
+製品品質を最優先に、計画的かつ着実な管理の下、継続的な改善を行うことで高い信頼に応える
+</p>
 
 </section>
 
@@ -155,10 +105,7 @@
 
 
 <!--このテンプレート専用のスクリプト-->
-<!-- ★ルートパスに変更：スマホメニューなどの動作不良を防止 -->
-<script src="/js/main.js"></script>
-
-<!-- ▼ ここから下を貼り付けます ▼ -->
+<!-- ★修正：前回の回答に基づき、メニュー表示とハンバーガーメニューのバグを防ぐため、fetch完了後に読み込む形へ最適化しました -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const menuArea = document.getElementById("common-menu");
@@ -167,11 +114,16 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(response => response.text())
             .then(data => {
                 menuArea.innerHTML = data;
-            });
+                
+                // メニューが挿入された後にmain.jsを動的に読み込む
+                const script = document.createElement("script");
+                script.src = "/js/main.js";
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error("メニューの読み込みに失敗しました:", error));
     }
 });
 </script>
-<!-- ▲ ここまで ▲ -->
 
 
 
