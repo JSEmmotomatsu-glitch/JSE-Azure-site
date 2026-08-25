@@ -9,86 +9,119 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Japan Smart Energy合同会社の公式ホームページです。当社は定置用蓄電システム（ESS）用電極の製造および販売を行っております。神奈川県相模原市から、エネルギーの未来を支える高品質な製品をお届けします。">
 
-<!-- ルートパス指定 -->
+<!-- ★ルートパスに変更：CSSの崩れを防止 -->
 <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
+
 <div id="container">
 
 <header>
+
 <div id="logo" style="margin: 0; padding: 0; display: flex; align-items: center; gap: 15px;">
     <!-- ロゴマーク -->
+    <!-- ★ルートパスに変更：トップページ（ルート直下）へのリンク -->
     <a href="/index.html" style="display: block; line-height: 0;">
+        <!-- ★ルートパスに変更：ロゴ画像の読み込み崩れを防止 -->
         <img src="/images/logo.png" alt="Japan Smart Energy ロゴ" style="height: 52px; width: auto; display: block;">
     </a>
     
     <!-- 会社名テキスト -->
     <h1 style="margin: 0; padding: 0; font-size: 1.4rem; font-weight: 700; line-height: 1.35; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; letter-spacing: 0.02em; text-align: left;">
+        <!-- ★ルートパスに変更 -->
         <a href="/index.html" style="text-decoration: none; color: #ffffff; display: block; text-align: left;">
             <span style="display: block; text-align: left; text-indent: 0; padding-left: 0; margin-left: 0;">Japan Smart Energy <span style="font-weight: 700; font-size: 0.85em; margin-left: 1px;">合同会社</span></span>
             <span style="display: block; text-align: left; text-indent: 0; padding-left: 0; margin-left: 0;">Japan Smart Energy <span style="font-weight: 500; font-size: 0.85em; opacity: 0.9; margin-left: 1px;">G.K.</span></span>
         </a>
     </h1>
 </div>
+
 </header>
+
 
 <div id="contents">
 
+
 <main>
-<!-- メイン領域：Flexboxで文字と画像を横並び（レスポンシブ対応） -->
+
+<!-- ★メイン領域の中だけで文字と画像を横並び（Flexbox）にし、最大幅を制限 -->
 <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; max-width: 100%; margin: 10px auto;">
 
-    <!-- 左側：テキストエリア -->
+    <!-- 左側：テキストエリア（幅を均等に分け、文字の大きさを強調） -->
     <div style="flex: 1; min-width: 250px;">
         <h2 style="font-size: 1.7rem; margin-bottom: 15px; border-bottom: none; padding-bottom: 0;">経営理念<span style="font-size: 0.50em; font-weight: normal; color: #dddddd; display: block; margin-top: 5px; font-family: Arial, sans-serif; letter-spacing: 0.05em;">Corporate Philosophy</span></h2>
         
+        <!-- 送っていただいたキャプチャのサイズ感に合わせて太さとサイズを維持 -->
         <p style="font-size: 1.3rem; font-weight: bold; line-height: 1.7; color: #ffffff; margin: 20px 0; padding: 5px 0 5px 12px; border-left: 5px solid #ffffff; letter-spacing: 0.02em;">
         製品品質を最優先に、計画的かつ着実な管理の下、継続的な改善を行うことで高い信頼に応える
         </p>
     </div>
 
-    <!-- 右側：画像エリア -->
+    <!-- 右側：画像エリア（大きくなりすぎないよう制限） -->
     <div style="flex: 1; min-width: 250px; line-height: 0;">
         <img src="/images/philosophy.png" alt="クリーンかつグリーンな電極製造現場的イメージ" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+        <!-- 誤解を防ぐための注記 -->
         <p style="margin: 6px 0 0 0; padding: 0; font-size: 0.7rem; color: #aaaaaa; text-align: right; line-height: 1.2;">※画像はイメージです</p>
     </div>
 
 </div>
+
 </main>
 
-<!-- 開閉ブロック（共通メニューの読み込み先） -->
-<div id="menubar">
-    <h3>MENU</h3>
-    <nav id="common-menu">
-    <!-- MENUはmenu.htmlから動的に挿入されます -->
-    </nav>
-</div>
 
-</div><!--/#contents-->
+
+
+<!--開閉ブロック-->
+<div id="menubar">
+
+<h3>MENU</h3>
+
+<nav id="common-menu">
+<!-- MENUはmenu.htmlで定義 -->
+</nav>
+
+</div>
+<!--/#menubar-->
+
+
+</div>
+<!--/#contents-->
+
 
 <footer>
+<!-- ★ルートパスに変更 -->
 <small>Copyright&copy; <a href="/index.html">Japan Smart Energy 合同会社</a> All Rights Reserved.</small>
-<span class="pr"><a href="https://template-party.com" target="_blank">《Web Design:Template-Party》</a></span>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
 </footer>
 
-</div><!--/#container-->
 
-<!-- ページの上部へ戻るボタン -->
+</div>
+<!--/#container-->
+
+
+<!--ページの上部へ戻るボタン-->
 <div class="pagetop"><a href="#">▲</a></div>
 
-<!-- 開閉ボタン（ハンバーガーアイコン） -->
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
 <div id="menubar_hdr">
-    <div class="menu-icon">
-        <span></span><span></span><span></span>
-    </div>
+<div class="menu-icon">
+<span></span><span></span><span></span>
+</div>
 </div>
 
-<!-- 【修正】jQueryの読み込みCDN（Google Hosted Librariesから最新の3.x系を指定） -->
-<script src="https://googleapis.com"></script>
 
-<!-- メニュー読み込み＆メインスクリプト実行 -->
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<!--このテンプレート専用のスクリプト-->
+<!-- ★ルートパスに変更：スマホメニューなどの動作不良を防止 -->
+<script src="/js/main.js"></script>
+
+<!-- ▼ ここから下を貼り付けます ▼ -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const menuArea = document.getElementById("common-menu");
@@ -97,16 +130,13 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(response => response.text())
             .then(data => {
                 menuArea.innerHTML = data;
-                
-                // メニュー挿入後にmain.jsを読み込む
-                const script = document.createElement("script");
-                script.src = "/js/main.js";
-                document.body.appendChild(script);
-            })
-            .catch(error => console.error("メニューの読み込みに失敗しました:", error));
+            });
     }
 });
 </script>
+<!-- ▲ ここまで ▲ -->
+
+
 
 </body>
 </html>
