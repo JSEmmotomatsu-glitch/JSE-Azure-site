@@ -31,7 +31,7 @@
     <!-- 会社名テキスト -->
     <h1 style="margin: 0; padding: 0; font-size: 1.4rem; font-weight: 700; line-height: 1.35; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; letter-spacing: 0.02em; text-align: left;">
         <!-- ★ルートパスに変更 -->
-        <a href="/index.html" style="text-decoration: text-indent: 0; padding-left: 0; margin-left: 0;">
+        <a href="/index.html" style="text-decoration: none; color: #ffffff; display: block; text-align: left;">
             <span style="display: block; text-align: left; text-indent: 0; padding-left: 0; margin-left: 0;">Japan Smart Energy <span style="font-weight: 700; font-size: 0.85em; margin-left: 1px;">合同会社</span></span>
             <span style="display: block; text-align: left; text-indent: 0; padding-left: 0; margin-left: 0;">Japan Smart Energy <span style="font-weight: 500; font-size: 0.85em; opacity: 0.9; margin-left: 1px;">G.K.</span></span>
         </a>
@@ -46,24 +46,24 @@
 
 <main>
 
-<!-- ★文字と画像を横並びにするためのコンテナ（Flexbox）を追加 -->
-<div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-top: 20px;">
+<!-- ★メイン領域の中だけで文字と画像を横並び（Flexbox）にし、最大幅を制限 -->
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; max-width: 100%; margin: 10px auto;">
 
-    <!-- 左側：テキストエリア（幅を約50%に設定して文字を強調） -->
-    <div style="flex: 1; min-width: 280px; padding-right: 10px;">
-        <h2 style="font-size: 1.8rem; margin-bottom: 15px; border-bottom: none; padding-bottom: 0;">経営理念<span style="font-size: 0.50em; font-weight: normal; color: #dddddd; display: block; margin-top: 5px; font-family: Arial, sans-serif; letter-spacing: 0.05em;">Corporate Philosophy</span></h2>
+    <!-- 左側：テキストエリア（幅を均等に分け、文字の大きさを強調） -->
+    <div style="flex: 1; min-width: 250px;">
+        <h2 style="font-size: 1.7rem; margin-bottom: 15px; border-bottom: none; padding-bottom: 0;">経営理念<span style="font-size: 0.50em; font-weight: normal; color: #dddddd; display: block; margin-top: 5px; font-family: Arial, sans-serif; letter-spacing: 0.05em;">Corporate Philosophy</span></h2>
         
-        <!-- 文章をさらに大きく、太くしてインパクトを出しました -->
-        <p style="font-size: 1.35rem; font-weight: bold; line-height: 1.8; color: #ffffff; margin: 25px 0; padding: 5px 0 5px 15px; border-left: 5px solid #ffffff; letter-spacing: 0.03em;">
+        <!-- 送っていただいたキャプチャのサイズ感に合わせて太さとサイズを維持 -->
+        <p style="font-size: 1.3rem; font-weight: bold; line-height: 1.7; color: #ffffff; margin: 20px 0; padding: 5px 0 5px 12px; border-left: 5px solid #ffffff; letter-spacing: 0.02em;">
         製品品質を最優先に、計画的かつ着実な管理の下、継続的な改善を行うことで高い信頼に応える
         </p>
     </div>
 
-    <!-- 右側：画像エリア（幅を制限して大きすぎないように調整） -->
-    <div style="flex: 1; min-width: 280px; line-height: 0;">
-        <img src="/images/philosophy.png" alt="クリーンかつグリーンな電極製造現場のイメージ" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+    <!-- 右側：画像エリア（大きくなりすぎないよう制限） -->
+    <div style="flex: 1; min-width: 250px; line-height: 0;">
+        <img src="/images/philosophy.png" alt="クリーンかつグリーンな電極製造現場的イメージ" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
         <!-- 誤解を防ぐための注記 -->
-        <p style="margin: 8px 0 0 0; padding: 0; font-size: 0.75rem; color: #aaaaaa; text-align: right; line-height: 1.2;">※画像はイメージです</p>
+        <p style="margin: 6px 0 0 0; padding: 0; font-size: 0.7rem; color: #aaaaaa; text-align: right; line-height: 1.2;">※画像はイメージです</p>
     </div>
 
 </div>
@@ -71,7 +71,7 @@
 </main>
 
 
-<!--開閉ブロック-->
+<!--開閉ブロック（左メニューはここに維持されます）-->
 <div id="menubar">
 
 <h3>MENU</h3>
@@ -139,3 +139,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+
