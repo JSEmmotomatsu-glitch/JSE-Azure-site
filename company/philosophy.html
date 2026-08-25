@@ -31,7 +31,7 @@
     <!-- 会社名テキスト -->
     <h1 style="margin: 0; padding: 0; font-size: 1.4rem; font-weight: 700; line-height: 1.35; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; letter-spacing: 0.02em; text-align: left;">
         <!-- ★ルートパスに変更 -->
-        <a href="/index.html" style="text-decoration: none; color: #ffffff; display: block; text-align: left;">
+        <a href="/index.html" style="text-decoration: text-indent: 0; padding-left: 0; margin-left: 0;">
             <span style="display: block; text-align: left; text-indent: 0; padding-left: 0; margin-left: 0;">Japan Smart Energy <span style="font-weight: 700; font-size: 0.85em; margin-left: 1px;">合同会社</span></span>
             <span style="display: block; text-align: left; text-indent: 0; padding-left: 0; margin-left: 0;">Japan Smart Energy <span style="font-weight: 500; font-size: 0.85em; opacity: 0.9; margin-left: 1px;">G.K.</span></span>
         </a>
@@ -46,23 +46,27 @@
 
 <main>
 
-<section>
+<!-- ★文字と画像を横並びにするためのコンテナ（Flexbox）を追加 -->
+<div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-top: 20px;">
 
-<!-- ★作成したイメージ画像の配置（階層を考慮してルートパス「/images/〜」で指定しています） -->
-<div style="margin-bottom: 25px; line-height: 0;">
-    <img src="/images/philosophy.png" alt="クリーンかつグリーンな電極製造現場のイメージ" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 4px;">
-    <!-- 誤解を防ぐための注記 -->
-    <p style="margin: 8px 0 0 0; padding: 0; font-size: 0.75rem; color: #aaaaaa; text-align: right; line-height: 1.2;">※画像はイメージです</p>
+    <!-- 左側：テキストエリア（幅を約50%に設定して文字を強調） -->
+    <div style="flex: 1; min-width: 280px; padding-right: 10px;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 15px; border-bottom: none; padding-bottom: 0;">経営理念<span style="font-size: 0.50em; font-weight: normal; color: #dddddd; display: block; margin-top: 5px; font-family: Arial, sans-serif; letter-spacing: 0.05em;">Corporate Philosophy</span></h2>
+        
+        <!-- 文章をさらに大きく、太くしてインパクトを出しました -->
+        <p style="font-size: 1.35rem; font-weight: bold; line-height: 1.8; color: #ffffff; margin: 25px 0; padding: 5px 0 5px 15px; border-left: 5px solid #ffffff; letter-spacing: 0.03em;">
+        製品品質を最優先に、計画的かつ着実な管理の下、継続的な改善を行うことで高い信頼に応える
+        </p>
+    </div>
+
+    <!-- 右側：画像エリア（幅を制限して大きすぎないように調整） -->
+    <div style="flex: 1; min-width: 280px; line-height: 0;">
+        <img src="/images/philosophy.png" alt="クリーンかつグリーンな電極製造現場のイメージ" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <!-- 誤解を防ぐための注記 -->
+        <p style="margin: 8px 0 0 0; padding: 0; font-size: 0.75rem; color: #aaaaaa; text-align: right; line-height: 1.2;">※画像はイメージです</p>
+    </div>
+
 </div>
-
-<h2>経営理念<span style="font-size: 0.55em; font-weight: normal; color: #dddddd; display: block; margin-top: 5px; font-family: Arial, sans-serif; letter-spacing: 0.05em;">Corporate Philosophy</span></h2>
-
-<!-- ★経営理念の文章を配置（文字が引き立つよう少し大きめ・太めにスタイリングしています） -->
-<p style="font-size: 1.15rem; font-weight: bold; line-height: 1.8; color: #ffffff; margin: 30px 0; padding: 0 10px; border-left: 4px solid #ffffff;">
-製品品質を最優先に、計画的かつ着実な管理の下、継続的な改善を行うことで高い信頼に応える
-</p>
-
-</section>
 
 </main>
 
@@ -87,7 +91,7 @@
 <footer>
 <!-- ★ルートパスに変更 -->
 <small>Copyright&copy; <a href="/index.html">Japan Smart Energy 合同会社</a> All Rights Reserved.</small>
-<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+<span class="pr"><a href="https://template-party.com" target="_blank">《Web Design:Template-Party》</a></span>
 </footer>
 
 
@@ -108,11 +112,10 @@
 
 
 <!--jQueryの読み込み-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://googleapis.com"></script>
 
 
 <!--このテンプレート専用のスクリプト-->
-<!-- ★修正：前回の回答に基づき、メニュー表示とハンバーガーメニューのバグを防ぐため、fetch完了後に読み込む形へ最適化しました -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const menuArea = document.getElementById("common-menu");
