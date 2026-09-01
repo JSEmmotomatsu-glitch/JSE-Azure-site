@@ -36,29 +36,53 @@
   /* ===================================================
      【上段】1〜3番目（代表あいさつ、経営理念、ビジョン）
      =================================================== */
-  .list-normal .list:nth-child(1),
-  .list-normal .list:nth-child(2),
-  .list-normal .list:nth-child(3) {
-    width: calc((100% - 30px) / 3) !important; /* 横に3つ並べる */
-    flex-direction: column !important; /* 画像の下に文字を配置 */
-  }
-  
-  /* 上段の大きな画像設定 */
-  .list-normal .list:nth-child(-n+3) figure {
-    width: 100% !important;
-    margin: 0 0 10px 0 !important;
-  }
-  .list-normal .list:nth-child(-n+3) figure img {
-    width: 100% !important;
-    height: 140px !important;
-    object-fit: cover !important;
-  }
-  .list-normal .list:nth-child(-n+3) .text h4 {
-    font-size: 1.1rem !important;
-    font-weight: bold !important;
-    color: #ffffff !important;
-  }
+/* 親要素：全体を横並びにする（隙間を15pxに設定） */
+.list-normal {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 15px !important;
+  width: 100%;
+}
 
+/* リンク全体のブロック化 */
+.list-normal .list a {
+  display: block !important;
+  text-decoration: none !important;
+}
+
+/* 【上段】1〜3番目のカード設定 */
+.list-normal .list:nth-child(1),
+.list-normal .list:nth-child(2),
+.list-normal .list:nth-child(3) {
+  width: calc((100% - 30px) / 3) !important; /* 横に3つ並べる */
+}
+
+/* 上段の大きな画像設定 */
+.list-normal .list:nth-child(-n+3) figure {
+  width: 100% !important;
+  margin: 0 0 10px 0 !important; /* 画像の下に10pxの隙間 */
+}
+
+.list-normal .list:nth-child(-n+3) figure img {
+  width: 100% !important;
+  height: 140px !important;
+  object-fit: cover !important;
+  filter: brightness(0.8);
+}
+
+/* 画像の下に配置されるテキストの設定 */
+.list-normal .list:nth-child(-n+3) .text {
+  text-align: center !important; /* 文字を中央寄せにする */
+  padding: 5px 0 !important;
+}
+
+/* ★ここを残します！ */
+.list-normal .list:nth-child(-n+3) .text h4 {
+  margin: 0 !important;
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+  color: #333333 !important; /* ホームページの背景が白いならこのままでOK！黒い背景なら #ffffff に書き換えてください */
+}
   /* ===================================================
      【下段】4〜9番目（会社概要〜採用）※3つずつの二段組
      =================================================== */
@@ -132,37 +156,39 @@
 
 <h2>会社情報（作成中）</h2>
 
-<div class="list-normal">
+ <div class="list-normal">
 
-<div class="list">
-<a href="#" style="display: block; width: 100%; position: relative; text-decoration: none; color: #ffffff; writing-mode: horizontal-tb !important;">
-<figure style="margin: 0; width: 100%; height: auto;"><img src="images/1.jpg" alt="" style="width: 100%; display: block; filter: brightness(0.8);"></figure>
-<div class="text" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 10px; box-sizing: border-box;">
-<h4 style="margin: 0 !important; font-size: 1.25rem; font-weight: bold; white-space: nowrap !important; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); writing-mode: horizontal-tb !important;">代表あいさつ</h4>
-<p></p>
-</div>
-</a>
-</div>
+      <!-- 1. 代表あいさつ -->
+      <div class="list">
+        <a href="#">
+          <figure><img src="images/1.jpg" alt=""></figure>
+          <div class="text">
+            <h4>代表あいさつ</h4>
+          </div>
+        </a>
+      </div>
 
-<div class="list">
-<a href="/company/philosophy" style="display: block; width: 100%; position: relative; text-decoration: none; color: #ffffff; writing-mode: horizontal-tb !important;">
-<figure style="margin: 0; width: 100%; height: auto;"><img src="images/philosophy.png" alt="" style="width: 100%; display: block; filter: brightness(0.8);"></figure>
-<div class="text" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 10px; box-sizing: border-box;">
-<h4 style="margin: 0 !important; font-size: 1.25rem; font-weight: bold; white-space: nowrap !important; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); writing-mode: horizontal-tb !important;">経営理念</h4>
-<p></p>
-</div>
-</a>
-</div>
+      <!-- 2. 経営理念 -->
+      <div class="list">
+        <a href="/company/philosophy">
+          <figure><img src="images/philosophy.png" alt=""></figure>
+          <div class="text">
+            <h4>経営理念</h4>
+          </div>
+        </a>
+      </div>
 
-<div class="list">
-<a href="/company/vision" style="display: block; width: 100%; position: relative; text-decoration: none; color: #ffffff; writing-mode: horizontal-tb !important;">
-<figure style="margin: 0; width: 100%; height: auto;"><img src="images/vision.png" alt="" style="width: 100%; display: block; filter: brightness(0.8);"></figure>
-<div class="text" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 10px; box-sizing: border-box;">
-<h4 style="margin: 0 !important; font-size: 1.25rem; font-weight: bold; white-space: nowrap !important; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); writing-mode: horizontal-tb !important;">ビジョン</h4>
-<p></p>
-</div>
-</a>
-</div>
+      <!-- 3. ビジョン -->
+      <div class="list">
+        <a href="/company/vision">
+          <figure><img src="images/vision.png" alt=""></figure>
+          <div class="text">
+            <h4>ビジョン</h4>
+          </div>
+        </a>
+      </div>
+
+    </div>
 
 
 <div class="list">
