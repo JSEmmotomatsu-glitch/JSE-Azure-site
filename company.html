@@ -84,48 +84,52 @@
   color: #333333 !important; /* ホームページの背景が白いならこのままでOK！黒い背景なら #ffffff に書き換えてください */
 }
   /* ===================================================
-     【下段】4〜9番目（会社概要〜採用）※3つずつの二段組
+     【下段】4番目以降も上段と「同じ大きさ」に統一する設定
      =================================================== */
-  .list-normal .list:nth-child(n+4) {
-    width: calc((100% - 30px) / 3) !important; /* 横に3つ並べる（自動で2段になります） */
-    flex-direction: row !important; /* 画像の右側に文字を配置する「横長ミニカード」 */
-    align-items: center !important; /* 画像と文字の上下中央を揃える */
-    background: rgba(255, 255, 255, 0.08) !important; /* ミニカード風に薄い背景を敷く */
-    border-radius: 4px !important;
-    padding: 8px !important;
+  
+  /* 親要素全体を整える（折り返しを許可し、左詰めで並べる） */
+  .list-normal {
+    display: flex !important;
+    flex-wrap: wrap !important;        /* 4番目以降を自動で下段に折り返す */
+    justify-content: flex-start !important; /* 左詰めで綺麗に並べる */
+    gap: 15px !important;              /* カード同士の隙間 */
+    width: 100%;
   }
 
-  /* 下段の画像を小さく表示する設定（画像をそのまま残す） */
+  /* 4番目以降のカードサイズも上段（1〜3番目）と全く同じにする */
+  .list-normal .list:nth-child(n+4) {
+    width: calc((100% - 30px) / 3) !important; /* 横に3つ並べる */
+    flex-direction: column !important; /* 上段と同じく、画像の下に文字を配置 */
+    background: none !important;       /* 背景を透明（上段と統一） */
+    padding: 0 !important;             /* 余計な余白を消す */
+  }
+
+  /* 4番目以降の画像設定（上段と全く同じサイズに統一） */
   .list-normal .list:nth-child(n+4) figure {
-    display: block !important; /* 非表示を解除して表示させる */
-    width: 50px !important; /* 画像の横幅を50pxに制限 */
-    height: 50px !important; /* 縦幅も50pxに制限 */
-    margin: 0 12px 0 0 !important; /* 右側にだけ文字との隙間を作る */
-    flex-shrink: 0 !important; /* 画面が狭くなっても画像が潰れないように固定 */
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;     /* 画像の下に10pxの隙間 */
   }
   .list-normal .list:nth-child(n+4) figure img {
     width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* 1.jpgを正方形に綺麗に縮小・切り抜き */
-    border-radius: 4px !important;
+    height: 140px !important;          /* 高さを140pxに統一 */
+    object-fit: cover !important;
+    filter: brightness(0.8);
   }
 
-  /* 下段の文字サイズと余白の調整 */
+  /* 4番目以降の文字設定（上段と全く同じに統一） */
   .list-normal .list:nth-child(n+4) .text {
-    padding: 0 !important;
-    text-align: left !important;
+    text-align: center !important;     /* 文字を中央寄せ */
+    padding: 5px 0 !important;
   }
-  .list-normal .list:nth-child(n+4) h4 {
-    font-size: 0.95rem !important; /* 文字が潰れない読みやすいサイズ */
-    font-weight: bold !important;
-    color: #ffffff !important;
+  .list-normal .list:nth-child(n+4) .text h4 {
     margin: 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    color: #ffffff !important;         /* 緑背景で見えやすいように白に統一 */
   }
   .list-normal .list:nth-child(n+4) p {
-    display: none !important; /* 空のpタグによる余計な隙間を消す */
+    display: none !important;          /* 不要な隙間を消す */
   }
-}
-</style>
 
 <body>
 
