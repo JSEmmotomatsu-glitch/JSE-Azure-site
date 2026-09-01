@@ -21,19 +21,19 @@
   .list-normal {
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: flex-start !important; /* 左詰めで並べる */
-    gap: 25px 15px !important;              /* 横の隙間15px、縦の隙間25px */
+    justify-content: flex-start !important;
+    gap: 25px 15px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
 
-  /* 既存テンプレートの干渉をクリアし、すべての項目を3分割の大きさに統一 */
+  /* すべての項目を3分割の大きさに統一 */
   .list-normal .list {
     margin: 0 !important;
     float: none !important;
     display: flex !important;
     box-sizing: border-box !important;
-    width: calc((100% - 30px) / 3) !important; /* 横に3つずつ綺麗に並ぶ幅 */
+    width: calc((100% - 30px) / 3) !important;
   }
 
   /* リンク全体のブロック化 */
@@ -43,40 +43,43 @@
     text-decoration: none !important;
   }
 
-  /* すべての画像設定（大きさを一元化） */
+  /* すべての画像設定（全体を真ん中基準に一括リセット） */
   .list-normal .list figure {
     width: 100% !important;
-    margin: 0 0 10px 0 !important; /* 画像の下に10pxの隙間を作る */
+    margin: 0 0 10px 0 !important;
   }
   .list-normal .list figure img {
     width: 100% !important;
-    height: 140px !important;      /* すべての画像の高さを140pxに統一 */
+    height: 140px !important;
     object-fit: cover !important;
+    object-position: center !important;
     filter: brightness(0.8);
+  }
+
+  /* 1番目の「代表あいさつ」だけ、画像を少し下に下げて頭の上を収める個別の設定 */
+  .list-normal .list:nth-child(1) figure img {
+    object-position: center 15% !important;
   }
 
   /* すべての文字設定（画像の下に白い文字で配置） */
   .list-normal .list .text {
-    position: static !important;   /* 重なりを確実に解除 */
+    position: static !important;
     height: auto !important;
-    text-align: center !important; /* 文字を中央寄せにする */
+    text-align: center !important;
     padding: 5px 0 !important;
   }
   .list-normal .list .text h4 {
     margin: 0 !important;
     font-size: 1.1rem !important;
     font-weight: bold !important;
-    color: #ffffff !important;     /* 緑背景でもクッキリ見えるように白文字に変更 */
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.4) !important; /* 薄い影をつけて読みやすく */
+    color: #ffffff !important;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4) !important;
   }
   .list-normal .list p {
-    display: none !important;      /* 空のpタグによる余計な隙間を非表示に */
+    display: none !important;
   }
-  /* 1番目の「代表あいさつ」の画像だけ、少し下にずらして頭の上を綺麗に収める */
-  .list-normal .list:nth-child(1) figure img {
-    object-position: center 20% !important;
-  }
-} /* パソコン用の設定（@media）をここで閉じます */
+
+}
 </style>
 
 <body>
