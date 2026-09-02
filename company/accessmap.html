@@ -11,6 +11,63 @@
 
 <!-- ★ルートパスに変更：CSSの崩れを防止 -->
 <link rel="stylesheet" href="/css/style.css">
+
+<!-- 2カラムおよびレスポンシブ用の追加スタイル -->
+<style>
+  .access-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  .access-map-side {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+  }
+  .access-text-side {
+    flex: 1;
+    min-width: 300px;
+    color: #ffffff; /* 文字を白に統一 */
+    line-height: 1.8;
+  }
+  .access-text-side h4 {
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    border-left: 4px solid #ffffff;
+    padding-left: 8px;
+  }
+  .access-text-side p {
+    margin: 0 0 20px 0;
+  }
+  /* 注意点ブロックの白枠スタイル */
+  .attention-box {
+    border: 2px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 30px;
+    color: #ffffff;
+  }
+  .attention-box h4 {
+    color: #ffdd44; /* 注意喚起のアイコン・タイトルを少し目立たせる黄色に */
+    font-size: 1.15rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  .attention-box p {
+    margin: 0 0 12px 0;
+    line-height: 1.7;
+  }
+  .attention-box p:last-child {
+    margin-bottom: 0;
+  }
+</style>
 </head>
 
 <body>
@@ -47,68 +104,56 @@
 <main>
 <section>
 
-<h2>アクセス・地図</h2>
+<h2 style="color: #ffffff; border-bottom: 1px solid #ffffff;">アクセス・地図</h2>
 
-<div class="access-container" style="margin-bottom: 30px;">
+<!-- レイアウト全体を包むコンテナ -->
+<div class="access-flex-container">
   
-  <!-- 地図画像エリア（AccessMap.pngを表示） -->
-  <div class="map-image-wrapper" style="margin-bottom: 30px; text-align: center;">
-    <img src="/images/AccessMap.png" alt="Japan Smart Energy 合同会社 アクセスマップ" style="max-width: 100%; height: auto; border: 1px solid #ccc; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-  </div>
-  
-  <!-- 会社所在地情報 -->
-  <div class="company-address-box" style="background-color: #f9f9f9; padding: 20px; border-radius: 4px; margin-bottom: 30px;">
-    <h3 style="margin-top: 0; color: #333; font-size: 1.2rem; border-bottom: 2px solid #ccc; padding-bottom: 8px;">所在地・受付について</h3>
-    <p style="margin: 8px 0; line-height: 1.6;">
-      <strong>Japan Smart Energy 合同会社</strong><br>
-      〒252-0242 神奈川県相模原市中央区南橋本3丁目（AESCジャパン相模原工場内）
-    </p>
-    <p style="margin: 8px 0; color: #d9534f; font-weight: bold; font-size: 0.95rem;">
-      ※当社は「AESCジャパン相模原工場」の敷地内にございます。ご来社の際は同工場の正門よりお入りください。
+  <!-- 【左側】地図画像エリア -->
+  <div class="access-map-side">
+    <img src="/images/accessmap.png" alt="Japan Smart Energy 合同会社 アクセスマップ" style="max-width: 100%; height: auto; border: 2px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+    <p style="color: #ffffff; margin-top: 10px; font-size: 0.9rem; text-align: center;">
+      〒252-0242 神奈川県相模原市中央区南橋本3丁目<br>（AESCジャパン相模原工場内）
     </p>
   </div>
-
-  <!-- アクセス詳細テキスト -->
-  <div class="access-details" style="line-height: 1.8; color: #333;">
+  
+  <!-- 【右側】道案内テキストエリア（白文字） -->
+  <div class="access-text-side">
     
-    <!-- 電車ルート -->
-    <div style="margin-bottom: 25px;">
-      <h4 style="font-size: 1.1rem; margin-bottom: 10px; display: flex; align-items: center; font-weight: 700;">
-        <span style="font-size: 1.3rem; margin-right: 5px;">🚶</span> 【電車（徒歩）でお越しの場合】
-      </h4>
-      <p style="margin: 0; padding-left: 5px;">
+    <!-- 徒歩の案内 -->
+    <div>
+      <h4>🚶 【電車（徒歩）でお越しの場合】</h4>
+      <p>
         <strong>最寄り駅：</strong>JR相模線 「南橋本駅」西口より徒歩約15分（約1.1km）<br>
-        <strong>道案内：</strong>西口ロータリーから線路沿いの道路を南へ直進します。あじさい通りに出たら道路を渡らずに右折します。あじさい通りの北側を西に向かい、国道129号線を渡ったのち直進すると、右手にAESCジャパン相模原工場の正門がありますので、そちらで受付をお願いいたします。
+        <strong>道案内：</strong>西口ロータリーから線路沿いの道路を南へ直進します。あじさい通りに出たら道路を渡らずに右折します。あじさい通りの北側を西に向かい、国道129号線を渡ったのち直進すると、右手にAESCジャパン相模原工場の正門があります。
       </p>
     </div>
 
-    <!-- お車ルート -->
-    <div style="margin-bottom: 30px;">
-      <h4 style="font-size: 1.1rem; margin-bottom: 10px; display: flex; align-items: center; font-weight: 700;">
-        <span style="font-size: 1.3rem; margin-right: 5px;">🚗</span> 【お車でお越しの場合】
-      </h4>
-      <p style="margin: 0 0 15px 0; padding-left: 5px;">
+    <!-- 車の案内 -->
+    <div>
+      <h4>🚗 【お車でお越しの場合】</h4>
+      <p>
         <strong>八王子・橋本方面（国道16号・橋本五差路 経由）から：</strong><br>
         国道129号線を厚木方面へ進み、「南橋本3丁目」交差点を西側へ右折して「あじさい通り」に入ります。右折後、約150m直進すると右手側に「AESCジャパン相模原工場（正門・守衛所）」があります。
       </p>
-      <p style="margin: 0; padding-left: 5px;">
+      <p>
         <strong>厚木・愛川方面（圏央道・相模原愛川IC 経由）から：</strong><br>
         国道129号線を八王子・橋本方面へ北上し、「南橋本3丁目」交差点を西側へ左折して「あじさい通り」に入ります。左折後、約150m直進すると右手側に「AESCジャパン相模原工場（正門・守衛所）」があります。
       </p>
     </div>
 
-    <!-- ドライバーへのお願い（強調枠） -->
-    <div style="border: 2px solid #d9534f; background-color: #fff9f9; padding: 20px; border-radius: 4px; margin-top: 25px;">
-      <h4 style="color: #d9534f; font-size: 1.1rem; margin-top: 0; margin-bottom: 10px; display: flex; align-items: center; font-weight: 700;">
-        <span style="font-size: 1.3rem; margin-right: 5px;">⚠️</span> ドライバーへのお願い（必ずご一読ください）
-      </h4>
-      <p style="margin: 0; font-weight: 700; line-height: 1.7; color: #c9302c;">
-        敷地内に入られましたら、お車を停めてまず正門の「守衛所」にて受付をお願いいたします。受付後、来客用駐車場および社内への進路をご案内いたします。
-      </p>
-    </div>
-
   </div>
+</div>
 
+<!-- 【一番下】注意点をまとめたブロック -->
+<div class="attention-box">
+  <h4>⚠️ ご来社時・ドライバーへのお願い</h4>
+  <p>
+    ※当社は「AESCジャパン相模原工場」の敷地内にございます。ご来社の際は同工場の正門よりお入りください。
+  </p>
+  <p style="font-weight: 700;">
+    ※敷地内に入られましたら、お車を停めてまず正門の「守衛所」にて受付をお願いいたします。受付後、来客用駐車場および社内への進路をご案内いたします。
+  </p>
 </div>
 
 </section>
@@ -181,4 +226,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
-
