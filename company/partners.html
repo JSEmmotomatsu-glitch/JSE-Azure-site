@@ -13,13 +13,75 @@
 <meta name="description" content="Japan Smart Energy合同会社の主要取引先をご紹介します。Fluence Energy、株式会社AESCジャパンなど、エネルギー分野の企業との取引を通じて事業を展開しています。">
 
 <link rel="stylesheet" href="/css/style.css">
+
+<style>
+.partner-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.partner-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.partner-list {
+    margin-top: 30px;
+}
+
+.partner-list p {
+    margin-bottom: 35px;
+}
+
+.partner-list a {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.partner-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.partner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.partner-note {
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 768px) {
+
+    .partner-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .partner-list a {
+        font-size: 2rem;
+    }
+
+    .partner-image {
+        max-width: 100%;
+        width: 100%;
+    }
+
+}
+</style>
+
 </head>
 
 <body>
 
-
 <div id="container">
-
 
 <header>
 
@@ -61,65 +123,58 @@
 </header>
 
 
-
 <div id="contents">
-
 
 <main>
 <section>
 
 <h2>主要取引先</h2>
 
-<div class="ceo-message-container">
+<div class="partner-container">
 
-  <!-- 左側：主要取引先 -->
-  <div class="ceo-text">
+    <!-- 左側：主要取引先 -->
+    <div class="partner-text">
 
-    <p>当社の主要取引先をご紹介します。</p>
+        <p>当社の主要取引先をご紹介します。</p>
 
-    <div class="partner-list" style="margin-top: 25px;">
+        <div class="partner-list">
 
-      <!-- Fluence Energy -->
-      <p style="margin-bottom: 25px;">
-        <a href="https://fluenceenergy.com/"
-           target="_blank"
-           rel="noopener noreferrer"
-           style="font-size: 1.4rem; font-weight: 600;">
-          Fluence Energy
-        </a>
-      </p>
+            <!-- Fluence Energy -->
+            <p>
+                <a href="https://fluenceenergy.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Fluence Energy
+                </a>
+            </p>
 
-      <!-- AESC -->
-      <p style="margin-bottom: 25px;">
-        <a href="https://www.aesc-group.com/jp/"
-           target="_blank"
-           rel="noopener noreferrer"
-           style="font-size: 1.4rem; font-weight: 600;">
-          株式会社AESCジャパン
-        </a>
-      </p>
+            <!-- AESC -->
+            <p>
+                <a href="https://www.aesc-group.com/jp/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    株式会社AESCジャパン
+                </a>
+            </p>
+
+        </div>
+
+        <p class="partner-note">
+            ※掲載企業名は敬称を省略しています。
+        </p>
 
     </div>
 
-    <p style="margin-top: 30px; font-size: 0.9em;">
-      ※掲載企業名は敬称を省略しています。
-    </p>
-
-  </div>
-
-
-  <!-- 右側：パートナー企業紹介画像 -->
-  <div class="ceo-image" style="max-width: 500px;">
-    <img src="/images/partner.png"
-         alt="パートナー企業紹介"
-         style="width: 100%; height: auto; display: block;">
-  </div>
+    <!-- 右側：画像 -->
+    <div class="partner-image">
+        <img src="/images/partner.png"
+             alt="主要取引先紹介">
+    </div>
 
 </div>
 
 </section>
 </main>
-
 
 
 <!--開閉ブロック-->
@@ -139,7 +194,6 @@
 <!--/#contents-->
 
 
-
 <footer>
 
 <small>
@@ -157,17 +211,14 @@ All Rights Reserved.
 </footer>
 
 
-
 </div>
 <!--/#container-->
-
 
 
 <!--ページの上部へ戻るボタン-->
 <div class="pagetop">
 <a href="#">▲</a>
 </div>
-
 
 
 <!--開閉ボタン（ハンバーガーアイコン）-->
@@ -180,7 +231,6 @@ All Rights Reserved.
 </div>
 
 </div>
-
 
 
 <!--jQueryの読み込み-->
@@ -209,8 +259,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
-
-
 
 </body>
 </html>
