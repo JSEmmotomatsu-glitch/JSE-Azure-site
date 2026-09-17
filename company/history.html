@@ -18,16 +18,9 @@
 
 .history-visual img {
     display: block;
+    height: clamp(180px, 22vw, 280px);
     width: 100%;
-    max-height: 360px;
     object-fit: cover;
-}
-
-.history-note {
-    margin: 10px 0 0;
-    color: #cccccc;
-    font-size: 0.85rem;
-    text-align: right;
 }
 
 .history-list {
@@ -56,7 +49,6 @@
 }
 
 .history-detail {
-    border-left: 2px solid rgba(255, 255, 255, 0.35);
     color: #eeeeee;
     font-size: 1rem;
     line-height: 2;
@@ -73,6 +65,17 @@
     position: absolute;
     top: 9px;
     width: 10px;
+    z-index: 1;
+}
+
+.history-item:not(:last-child) .history-detail::after {
+    background: rgba(255, 255, 255, 0.35);
+    content: "";
+    left: -2px;
+    position: absolute;
+    top: 14px;
+    bottom: -47px;
+    width: 2px;
 }
 
 @media screen and (max-width: 600px) {
@@ -86,7 +89,12 @@
     }
 
     .history-detail {
+        border-left: 2px solid rgba(255, 255, 255, 0.35);
         padding-left: 22px;
+    }
+
+    .history-item:not(:last-child) .history-detail::after {
+        display: none;
     }
 }
 </style>
@@ -122,9 +130,7 @@
 <h2>沿革</h2>
 
 <figure class="history-visual">
-    <!-- 仮画像です。差し替える場合は、次のsrcだけを変更してください。 -->
-    <img src="/images/1.jpg" alt="Japan Smart Energyの事業イメージ">
-    <figcaption class="history-note">※画像は仮掲載です。</figcaption>
+    <img src="/images/history-nagasaki-sagamihara.png" alt="長崎から相模原へ広がるJapan Smart Energyの事業を表現したイメージ">
 </figure>
 
 <ol class="history-list">
