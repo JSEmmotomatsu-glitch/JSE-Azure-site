@@ -12,81 +12,51 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 <style>
-.home-hero {
-    min-height: 360px;
+#mainimg.home-hero {
+    height: clamp(230px, 22vw, 320px);
+    margin: 0 auto;
+    max-width: 1200px;
     overflow: hidden;
     position: relative;
+    width: calc(100% - 80px);
 }
 
-.home-hero > img {
+#mainimg.home-hero > img {
     display: block;
-    height: clamp(360px, 42vw, 560px);
+    height: 100%;
     object-fit: cover;
     width: 100%;
 }
 
-.home-hero::after {
-    background: rgba(255, 255, 255, 0.08);
-    content: "";
-    inset: 0;
-    position: absolute;
-}
-
-.home-hero-brand {
+#mainimg.home-hero .home-hero-brand {
     align-items: center;
-    color: #0b3a4a;
     display: flex;
-    gap: 22px;
+    justify-content: center;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: min(760px, calc(100% - 48px));
     z-index: 1;
 }
 
-.home-hero-brand img {
-    background: rgba(255, 255, 255, 0.94);
-    height: 110px;
+#mainimg.home-hero .home-hero-brand img {
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 8px 28px rgba(0, 70, 120, 0.22);
+    height: 120px;
     object-fit: contain;
-    padding: 8px;
-    width: 110px;
-}
-
-.home-hero-brand-name {
-    font-size: clamp(1.6rem, 3vw, 2.7rem);
-    font-weight: 700;
-    line-height: 1.35;
-    margin: 0;
-    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.95);
-}
-
-.home-hero-brand-en {
-    display: block;
-    font-size: 0.66em;
-    font-weight: 500;
-    margin-top: 8px;
+    padding: 10px;
+    width: 120px;
 }
 
 @media screen and (max-width: 600px) {
-    .home-hero {
-        min-height: 310px;
+    #mainimg.home-hero {
+        height: 220px;
+        width: 100%;
     }
 
-    .home-hero > img {
-        height: 310px;
-    }
-
-    .home-hero-brand {
-        display: block;
-        text-align: center;
-        width: calc(100% - 36px);
-    }
-
-    .home-hero-brand img {
-        height: 82px;
-        margin: 0 auto 16px;
-        width: 82px;
+    #mainimg.home-hero .home-hero-brand img {
+        height: 96px;
+        width: 96px;
     }
 }
 </style>
@@ -114,13 +84,9 @@
 </header>
 
 <aside id="mainimg" class="home-hero">
-<img src="/images/homepage-energy-vision-v2.png" alt="未来へ広がるエネルギーと技術革新を表現したイメージ">
+<img src="/images/homepage-energy-vision-v3.png" alt="未来へ広がるエネルギーと技術革新を表現したイメージ">
 <div class="home-hero-brand">
     <img src="/images/logo.png" alt="Japan Smart Energy ロゴ">
-    <p class="home-hero-brand-name">
-        Japan Smart Energy合同会社
-        <span class="home-hero-brand-en">Japan Smart Energy G.K.</span>
-    </p>
 </div>
 </aside>
 
