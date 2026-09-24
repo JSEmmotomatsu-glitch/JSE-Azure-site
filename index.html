@@ -3,49 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <title>Japan Smart Energy 合同会社 | Japan Smart Energy G.K.</title>
-<!-- ▼ 後日、一般公開するときはこの1行を丸ごと削除する ▼ -->
+<!-- 一般公開時に検索結果へ掲載する場合は、次の1行を削除してください。 -->
 <meta name="robots" content="noindex">
-<!-- ▲ ここまで ▲ -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Japan Smart Energy合同会社の公式ホームページです。当社は定置用蓄電システム（ESS）用電極の製造および販売を行っております。神奈川県相模原市から、エネルギーの未来を支える高品質な製品をお届けします。">
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<style>
+#mainimg.home-hero {
+    height: auto;
+    margin: 0;
+    max-width: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#mainimg.home-hero > img {
+    display: block;
+    height: clamp(230px, 22vw, 320px);
+    object-fit: cover;
+    width: 100%;
+}
+
+#mainimg.home-hero .home-hero-copy {
+    background: rgba(0, 68, 72, 0.78);
+    color: #ffffff;
+    font-size: clamp(1rem, 1.7vw, 1.35rem);
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    padding: 13px 24px;
+    position: static;
+    text-align: center;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+@media screen and (max-width: 600px) {
+    #mainimg.home-hero {
+        height: auto;
+        width: 100%;
+    }
+
+    #mainimg.home-hero > img {
+        height: 220px;
+    }
+
+    #mainimg.home-hero .home-hero-copy {
+        font-size: 1rem;
+        padding: 10px 14px;
+    }
+}
+</style>
 </head>
 
 <body>
-
 
 <div id="container">
 
 <header>
 
 <div id="logo" style="margin: 0; padding: 0; display: flex; align-items: center; gap: 15px;">
-    <!-- ロゴマーク -->
     <a href="./" style="display: block; line-height: 0;">
-        <img src="images/logo.png" alt="Japan Smart Energy ロゴ" style="height: 52px; width: auto; display: block;">
+        <img src="/images/logo.png" alt="Japan Smart Energy ロゴ" style="height: 52px; width: auto; display: block;">
     </a>
-    
-    <!-- 会社名テキスト -->
-    <h1 style="margin: 0; padding: 0; font-size: 1.4rem; font-weight: 700; line-height: 1.35; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; letter-spacing: 0.02em; text-align: left;">
+
+    <h1 style="margin: 0; padding: 0; font-size: 1.7rem; font-weight: 700; line-height: 1.35; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; letter-spacing: 0.02em; text-align: left;">
         <a href="./" style="text-decoration: none; color: #ffffff; display: block; text-align: left;">
-            <span style="display: block; text-align: left; text-indent: 0; padding-left: 0; margin-left: 0;">Japan Smart Energy <span style="font-weight: 700; font-size: 0.85em; margin-left: 1px;">合同会社</span></span>
-            <span style="display: block; text-align: left; text-indent: 0; padding-left: 0; margin-left: 0;">Japan Smart Energy <span style="font-weight: 500; font-size: 0.85em; opacity: 0.9; margin-left: 1px;">G.K.</span></span>
+            Japan Smart Energy 合同会社
         </a>
     </h1>
 </div>
 
 </header>
 
-
-
-<aside id="mainimg">
-<img src="images/1.jpg" alt="">
+<aside id="mainimg" class="home-hero">
+<img src="/images/indeximage-banner-v2.png" alt="相模原から世界へ広がるESS電極とエネルギー技術のイメージ">
+<p class="home-hero-copy">エネルギーとデジタルの力で、持続可能な未来へ。</p>
 </aside>
 
-
 <div id="contents">
-
 
 <main>
 
@@ -68,12 +107,9 @@
 
 </section>
 
-
-
 </main>
 
-
-<!--開閉ブロック-->
+<!-- 開閉ブロック -->
 <div id="menubar">
 
 <h3>MENU</h3>
@@ -83,55 +119,50 @@
 </nav>
 
 </div>
-<!--/#menubar-->
-
+<!-- /#menubar -->
 
 </div>
-<!--/#contents-->
-
+<!-- /#contents -->
 
 <footer>
 <small>Copyright&copy; <a href="./">Japan Smart Energy 合同会社</a> All Rights Reserved.</small>
-<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+<span class="pr"><a href="https://template-party.com/" target="_blank" rel="noopener noreferrer">《Web Design:Template-Party》</a></span>
 </footer>
 
-
 </div>
-<!--/#container-->
+<!-- /#container -->
 
-
-<!--ページの上部へ戻るボタン-->
 <div class="pagetop"><a href="#">▲</a></div>
 
-
-<!--開閉ボタン（ハンバーガーアイコン）-->
 <div id="menubar_hdr">
 <div class="menu-icon">
 <span></span><span></span><span></span>
 </div>
 </div>
 
-
-<!--jQueryの読み込み-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/js/main.js"></script>
 
-
-<!--このテンプレート専用のスクリプト-->
-<script src="js/main.js"></script>
-<!-- ▼ ここから下を貼り付けます ▼ -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const menuArea = document.getElementById("common-menu");
     if (menuArea) {
         fetch("/menu.html")
-            .then(response => response.text())
-            .then(data => {
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error("Menu could not be loaded.");
+                }
+                return response.text();
+            })
+            .then(function(data) {
                 menuArea.innerHTML = data;
+            })
+            .catch(function() {
+                menuArea.innerHTML = "";
             });
     }
 });
 </script>
-<!-- ▲ ここまで ▲ -->
 
 </body>
 </html>
