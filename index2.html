@@ -28,24 +28,21 @@
     width: 100%;
 }
 
-#mainimg.home-hero .home-hero-brand {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    left: 50%;
+#mainimg.home-hero .home-hero-copy {
+    background: rgba(0, 68, 72, 0.78);
+    bottom: 0;
+    color: #ffffff;
+    font-size: clamp(1rem, 1.7vw, 1.35rem);
+    font-weight: 700;
+    left: 0;
+    line-height: 1.5;
+    margin: 0;
+    padding: 13px 24px;
     position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    right: 0;
+    text-align: center;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
     z-index: 1;
-}
-
-#mainimg.home-hero .home-hero-brand img {
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 8px 28px rgba(0, 70, 120, 0.22);
-    height: 120px;
-    object-fit: contain;
-    padding: 10px;
-    width: 120px;
 }
 
 @media screen and (max-width: 600px) {
@@ -54,9 +51,9 @@
         width: 100%;
     }
 
-    #mainimg.home-hero .home-hero-brand img {
-        height: 96px;
-        width: 96px;
+    #mainimg.home-hero .home-hero-copy {
+        font-size: 1rem;
+        padding: 10px 14px;
     }
 }
 </style>
@@ -84,10 +81,8 @@
 </header>
 
 <aside id="mainimg" class="home-hero">
-<img src="/images/homepage-energy-vision-v3.png" alt="未来へ広がるエネルギーと技術革新を表現したイメージ">
-<div class="home-hero-brand">
-    <img src="/images/logo.png" alt="Japan Smart Energy ロゴ">
-</div>
+<img src="/images/indeximage.png" alt="相模原から世界へ広がるESS電極とエネルギー技術のイメージ">
+<p class="home-hero-copy">エネルギーとデジタルの力で、持続可能な未来へ。</p>
 </aside>
 
 <div id="contents">
