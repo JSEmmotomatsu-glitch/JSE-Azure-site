@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>主要取引先 | Japan Smart Energy 合同会社</title>
+<!-- 一般公開時に検索結果へ掲載する場合は、次の1行を削除してください。 -->
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Japan Smart Energy合同会社の主要取引先をご紹介します。FIXX Energy、株式会社AESCジャパンなど、エネルギー分野の企業との取引を通じて事業を展開しています。">
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<style>
+.partner-visual {
+    margin: 35px 0 0;
+}
+
+.partner-visual img {
+    display: block;
+    height: clamp(180px, 20vw, 280px);
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.partner-intro {
+    color: #eeeeee;
+    line-height: 1.8;
+    margin: 0 0 24px;
+}
+
+.partner-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.partner-list li {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 22px 0;
+}
+
+.partner-list li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.partner-list a {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.partner-list a:hover {
+    text-decoration: underline;
+}
+
+.partner-note {
+    color: #eeeeee;
+    font-size: 0.9rem;
+    margin: 22px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+    .partner-list a {
+        font-size: 1.15rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+
+<div id="logo" style="margin: 0; padding: 0; display: flex; align-items: center; gap: 15px;">
+    <a href="/index.html" style="display: block; line-height: 0;">
+        <img src="/images/logo.png" alt="Japan Smart Energy ロゴ" style="height: 52px; width: auto; display: block;">
+    </a>
+
+    <h1 style="margin: 0; padding: 0; font-size: 1.7rem; font-weight: 700; line-height: 1.35; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; letter-spacing: 0.02em; text-align: left;">
+        <a href="/index.html" style="text-decoration: none; color: #ffffff; display: block; text-align: left;">
+            Japan Smart Energy 合同会社
+        </a>
+    </h1>
+</div>
+
+</header>
+
+<div id="contents">
+
+<main>
+
+<section>
+
+<h2>主要取引先</h2>
+
+<p class="partner-intro">信頼と共創を大切に、持続可能なエネルギーの未来をともにつくるパートナー企業をご紹介します。</p>
+
+<ul class="partner-list">
+    <li>
+        <a href="https://fixxenergy.com/" target="_blank" rel="noopener noreferrer">FIXX Energy, LLC</a>
+    </li>
+    <li>
+        <a href="https://www.aesc-group.com/jp/" target="_blank" rel="noopener noreferrer">株式会社AESCジャパン</a>
+    </li>
+</ul>
+
+<p class="partner-note">※掲載企業名は敬称を省略しています。</p>
+
+<figure class="partner-visual">
+    <img src="/images/partners-handshake.png" alt="持続可能なエネルギー分野における企業間の信頼と協力を表現した握手のイメージ">
+</figure>
+
+</section>
+
+</main>
+
+<!-- 開閉ブロック -->
+<div id="menubar">
+
+<h3>MENU</h3>
+
+<nav id="common-menu">
+<!-- MENUはmenu.htmlで定義 -->
+</nav>
+
+</div>
+<!-- /#menubar -->
+
+</div>
+<!-- /#contents -->
+
+<footer>
+<small>Copyright&copy; <a href="/index.html">Japan Smart Energy 合同会社</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank" rel="noopener noreferrer">《Web Design:Template-Party》</a></span>
+</footer>
+
+</div>
+<!-- /#container -->
+
+<div class="pagetop"><a href="#">▲</a></div>
+
+<div id="menubar_hdr">
+<div class="menu-icon">
+<span></span><span></span><span></span>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const menuArea = document.getElementById("common-menu");
+    if (menuArea) {
+        fetch("/menu.html")
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error("Menu could not be loaded.");
+                }
+                return response.text();
+            })
+            .then(function(data) {
+                menuArea.innerHTML = data;
+            })
+            .catch(function() {
+                menuArea.innerHTML = "";
+            });
+    }
+});
+</script>
+
+</body>
+</html>
