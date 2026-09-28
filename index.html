@@ -6,16 +6,18 @@
 <!-- 一般公開時に検索結果へ掲載する場合は、次の1行を削除してください。 -->
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Japan Smart Energy合同会社の公式ホームページです。当社は定置用蓄電システム（ESS）用電極の製造および販売を行っております。神奈川県相模原市から、エネルギーの未来を支える高品質な製品をお届けします。">
+<meta name="description" content="Japan Smart Energy合同会社の公式ホームページです。当社は定置用蓄電システム（ESS）用電極の製造および販売を行っております。">
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 <style>
+.home-main {
+    min-width: 0;
+}
+
 #mainimg.home-hero {
-    height: auto;
     margin: 0;
-    max-width: none;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -23,37 +25,32 @@
 
 #mainimg.home-hero > img {
     display: block;
-    height: clamp(230px, 22vw, 320px);
+    height: clamp(280px, 24vw, 420px);
     object-fit: cover;
+    object-position: center;
     width: 100%;
 }
 
 #mainimg.home-hero .home-hero-copy {
-    background: rgba(0, 68, 72, 0.78);
+    background: rgba(0, 68, 72, 0.82);
     color: #ffffff;
     font-size: clamp(1rem, 1.7vw, 1.35rem);
     font-weight: 700;
     line-height: 1.5;
     margin: 0;
-    padding: 13px 24px;
-    position: static;
+    padding: 14px 24px;
     text-align: center;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
 @media screen and (max-width: 600px) {
-    #mainimg.home-hero {
-        height: auto;
-        width: 100%;
-    }
-
     #mainimg.home-hero > img {
-        height: 220px;
+        height: 260px;
     }
 
     #mainimg.home-hero .home-hero-copy {
         font-size: 1rem;
-        padding: 10px 14px;
+        padding: 11px 14px;
     }
 }
 </style>
@@ -79,33 +76,14 @@
 
 </header>
 
-<aside id="mainimg" class="home-hero">
-<img src="/images/indeximage-banner-v2.png" alt="相模原から世界へ広がるESS電極とエネルギー技術のイメージ">
-<p class="home-hero-copy">エネルギーとデジタルの力で、持続可能な未来へ。</p>
-</aside>
-
 <div id="contents">
 
-<main>
+<main class="home-main">
 
-<section>
-
-<h2>お知らせ (News)</h2>
-
-<dl class="new">
-<dt style="color: #ffffff;">2026/07/29</dt>
-<dd>
-<strong style="color: #ffffff;">Official Website Launched</strong><br>
-<span style="font-size: 0.9em; color: #dddddd;">公式ホームページを開設いたしました。</span>
-</dd>
-<dt style="color: #ffffff;">2026/07/29</dt>
-<dd>
-<strong style="color: #ffffff;">Business Operations</strong><br>
-<span style="font-size: 0.9em; color: #dddddd;">神奈川県相模原市にて、ESS用電極の製造・販売事業を展開しております。</span>
-</dd>
-</dl>
-
-</section>
+<aside id="mainimg" class="home-hero">
+    <img src="/images/indeximage-banner-v5.png" alt="相模原からアメリカへ広がるESS電極とエネルギー技術のイメージ">
+    <p class="home-hero-copy">エネルギーとデジタルの力で、持続可能な未来へ。</p>
+</aside>
 
 </main>
 
