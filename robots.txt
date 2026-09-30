@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.japan-smart-energy.co.jp/sitemap.xml
