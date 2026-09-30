@@ -6,7 +6,7 @@
 <!-- 一般公開時に検索結果へ掲載する場合は、次の1行を削除してください。 -->
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Japan Smart Energy合同会社の主要取引先をご紹介します。FIXX Energy、株式会社AESCジャパンなど、エネルギー分野の企業との取引を通じて事業を展開しています。">
+<meta name="description" content="Japan Smart Energy合同会社の主要取引先をご紹介します。エネルギー分野の企業との協業を通じて事業を展開しています。">
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -38,7 +38,7 @@
 
 .partner-list li {
     border-top: 1px solid rgba(255, 255, 255, 0.35);
-    padding: 22px 0;
+    padding: 18px 0;
 }
 
 .partner-list li:last-child {
@@ -46,27 +46,55 @@
 }
 
 .partner-list a {
+    align-items: center;
     color: #ffffff;
-    display: inline-block;
+    display: flex;
     font-size: 1.35rem;
     font-weight: 700;
+    gap: 28px;
     line-height: 1.5;
     text-decoration: none;
 }
 
-.partner-list a:hover {
-    text-decoration: underline;
+.partner-logo {
+    align-items: center;
+    display: flex;
+    flex: 0 0 220px;
+    height: 72px;
+    justify-content: flex-start;
 }
 
-.partner-note {
-    color: #eeeeee;
-    font-size: 0.9rem;
-    margin: 22px 0 0;
+.partner-logo img {
+    display: block;
+    max-height: 58px;
+    max-width: 200px;
+    object-fit: contain;
+    object-position: left center;
+    width: auto;
+}
+
+.partner-name {
+    display: inline-block;
+}
+
+.partner-list a:hover .partner-name {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {
     .partner-list a {
         font-size: 1.15rem;
+        gap: 18px;
+    }
+
+    .partner-logo {
+        flex-basis: 145px;
+        height: 58px;
+    }
+
+    .partner-logo img {
+        max-height: 46px;
+        max-width: 135px;
     }
 }
 </style>
@@ -104,13 +132,14 @@
 
 <ul class="partner-list">
     <li>
-        <a href="https://fixxenergy.com/" target="_blank" rel="noopener noreferrer">FIXX Energy, LLC</a>
-    </li>
-    <li>
-        <a href="https://www.aesc-group.com/jp/" target="_blank" rel="noopener noreferrer">株式会社AESCジャパン</a>
+        <a href="https://www.aesc-group.com/jp/" target="_blank" rel="noopener noreferrer">
+            <span class="partner-logo">
+                <img src="/images/partner-logo-aesc.svg" alt="AESC ロゴ">
+            </span>
+            <span class="partner-name">株式会社AESCジャパン</span>
+        </a>
     </li>
 </ul>
-
 
 <figure class="partner-visual">
     <img src="/images/partners-handshake.png" alt="持続可能なエネルギー分野における企業間の信頼と協力を表現した握手のイメージ">
