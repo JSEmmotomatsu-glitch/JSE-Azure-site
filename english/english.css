@@ -1,0 +1,29 @@
+.language-switch {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-left: auto;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.language-switch:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    #logo {
+        flex-wrap: wrap;
+    }
+
+    #logo h1 {
+        flex: 0 1 calc(100% - 140px);
+        min-width: 0;
+    }
+
+    .language-switch {
+        flex: 0 0 calc(100% - 67px);
+        font-size: 0.8rem;
+        margin: 4px 0 0 67px;
+        text-align: left;
+    }
+}

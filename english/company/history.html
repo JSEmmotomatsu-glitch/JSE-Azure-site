@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Company History | Japan Smart Energy G.K.</title>
+<!-- 一般公開時に検索結果へ掲載する場合は、次の1行を削除してください。 -->
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The history of Japan Smart Energy G.K., from its establishment in Nagasaki to the launch of ESS electrode manufacturing and sales in Sagamihara.">
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/english/english.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<style>
+.history-visual {
+    margin: 0 0 35px;
+}
+
+.history-visual img {
+    display: block;
+    height: clamp(180px, 22vw, 280px);
+    width: 100%;
+    object-fit: cover;
+}
+
+.history-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.history-item {
+    display: grid;
+    grid-template-columns: minmax(120px, 170px) 1fr;
+    gap: 28px;
+    padding: 0 0 38px;
+    position: relative;
+}
+
+.history-item:last-child {
+    padding-bottom: 0;
+}
+
+.history-date {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.history-detail {
+    color: #eeeeee;
+    font-size: 1rem;
+    line-height: 2;
+    padding: 0 0 0 30px;
+    position: relative;
+}
+
+.history-detail::before {
+    background: #ffffff;
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    left: -6px;
+    position: absolute;
+    top: 9px;
+    width: 10px;
+    z-index: 1;
+}
+
+.history-item:not(:last-child) .history-detail::after {
+    background: rgba(255, 255, 255, 0.35);
+    content: "";
+    left: -2px;
+    position: absolute;
+    top: 14px;
+    bottom: -47px;
+    width: 2px;
+}
+
+@media screen and (max-width: 600px) {
+    .history-item {
+        display: block;
+        padding-bottom: 32px;
+    }
+
+    .history-date {
+        margin-bottom: 8px;
+    }
+
+    .history-detail {
+        border-left: 2px solid rgba(255, 255, 255, 0.35);
+        padding-left: 22px;
+    }
+
+    .history-item:not(:last-child) .history-detail::after {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+
+<div id="logo" style="margin: 0; padding: 0; display: flex; align-items: center; gap: 15px; width: 100%;">
+    <a href="/english/" style="display: block; line-height: 0;">
+        <img src="/images/logo.png" alt="Japan Smart Energy logo" style="height: 52px; width: auto; display: block;">
+    </a>
+
+<!-- 会社名テキスト -->
+<h1 style="margin: 0; padding: 0; font-size: 1.7rem; font-weight: 700; line-height: 1.35; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; letter-spacing: 0.02em; text-align: left;">
+    <a href="/english/" style="text-decoration: none; color: #ffffff; display: block; text-align: left;">
+        Japan Smart Energy G.K.
+    </a>
+</h1>
+    <a class="language-switch" href="/company/history" lang="ja">日本語</a>
+</div>
+
+</header>
+
+<div id="contents">
+
+<main>
+
+<section>
+
+<h2>Company History</h2>
+
+<figure class="history-visual">
+    <img src="/images/history-nagasaki-sagamihara.png" alt="Japan Smart Energy's business expansion from Nagasaki to Sagamihara">
+</figure>
+
+<ol class="history-list">
+    <li class="history-item">
+        <div class="history-date">April 19, 2022</div>
+        <div class="history-detail">
+            Smart City Consulting G.K. was established in Nagasaki Prefecture and began providing digital transformation (DX) consulting services to local governments and other organizations.
+        </div>
+    </li>
+    <li class="history-item">
+        <div class="history-date">January 20, 2026</div>
+        <div class="history-detail">
+            In collaboration with AESC Japan, the company launched the manufacture and sale of electrodes for energy storage systems (ESS) in Sagamihara, Kanagawa Prefecture.
+        </div>
+    </li>
+</ol>
+
+</section>
+
+</main>
+
+<!-- 開閉ブロック -->
+<div id="menubar">
+
+<h3>MENU</h3>
+
+<nav id="common-menu">
+<!-- MENUはmenu.htmlで定義 -->
+</nav>
+
+</div>
+<!-- /#menubar -->
+
+</div>
+<!-- /#contents -->
+
+<footer>
+<small>Copyright&copy; <a href="/english/">Japan Smart Energy G.K.</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank" rel="noopener noreferrer">《Web Design:Template-Party》</a></span>
+</footer>
+
+</div>
+<!-- /#container -->
+
+<div class="pagetop"><a href="#">▲</a></div>
+
+<div id="menubar_hdr">
+<div class="menu-icon">
+<span></span><span></span><span></span>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const menuArea = document.getElementById("common-menu");
+    if (menuArea) {
+        fetch("/english/menu.html")
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error("Menu could not be loaded.");
+                }
+                return response.text();
+            })
+            .then(function(data) {
+                menuArea.innerHTML = data;
+            })
+            .catch(function() {
+                menuArea.innerHTML = "";
+            });
+    }
+});
+</script>
+
+</body>
+</html>
+

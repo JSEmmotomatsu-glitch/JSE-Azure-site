@@ -2,58 +2,101 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Japan Smart Energy G.K.</title>
-<!-- Remove the following line when the English site is ready to appear in search results. -->
+<title>Business Partners | Japan Smart Energy G.K.</title>
+<!-- 一般公開時に検索結果へ掲載する場合は、次の1行を削除してください。 -->
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Official website of Japan Smart Energy G.K. We manufacture and sell electrodes for energy storage systems (ESS), delivering high-quality products from Sagamihara, Kanagawa Prefecture, to support the future of energy.">
+<meta name="description" content="Business partners working with Japan Smart Energy G.K. to build a sustainable energy future.">
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/english/english.css">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 <style>
-.home-main {
-    min-width: 0;
+.partner-visual {
+    margin: 35px 0 0;
 }
 
-#mainimg.home-hero {
-    margin: 0;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-
-#mainimg.home-hero > img {
+.partner-visual img {
     display: block;
-    height: clamp(280px, 24vw, 420px);
+    height: clamp(180px, 20vw, 280px);
+    width: 100%;
     object-fit: cover;
     object-position: center;
-    width: 100%;
 }
 
-#mainimg.home-hero .home-hero-copy {
-    background: rgba(0, 68, 72, 0.78);
-    color: #ffffff;
-    font-size: clamp(1rem, 1.7vw, 1.35rem);
-    font-weight: 700;
-    line-height: 1.5;
+.partner-intro {
+    color: #eeeeee;
+    line-height: 1.8;
+    margin: 0 0 24px;
+}
+
+.partner-list {
+    list-style: none;
     margin: 0;
-    padding: 14px 24px;
-    text-align: center;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+    padding: 0;
+}
+
+.partner-list li {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 18px 0;
+}
+
+.partner-list li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.partner-list a {
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    font-size: 1.35rem;
+    font-weight: 700;
+    gap: 28px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.partner-logo {
+    align-items: center;
+    display: flex;
+    flex: 0 0 220px;
+    height: 72px;
+    justify-content: flex-start;
+}
+
+.partner-logo img {
+    display: block;
+    max-height: 58px;
+    max-width: 200px;
+    object-fit: contain;
+    object-position: left center;
+    width: auto;
+}
+
+.partner-name {
+    display: inline-block;
+}
+
+.partner-list a:hover .partner-name {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {
-    #mainimg.home-hero > img {
-        height: 260px;
+    .partner-list a {
+        font-size: 1.15rem;
+        gap: 18px;
     }
 
-    #mainimg.home-hero .home-hero-copy {
-        font-size: 1rem;
-        padding: 11px 14px;
+    .partner-logo {
+        flex-basis: 145px;
+        height: 58px;
     }
 
+    .partner-logo img {
+        max-height: 46px;
+        max-width: 135px;
+    }
 }
 </style>
 </head>
@@ -74,30 +117,48 @@
             Japan Smart Energy G.K.
         </a>
     </h1>
-
-    <a class="language-switch" href="/" lang="ja">日本語</a>
+    <a class="language-switch" href="/company/partners" lang="ja">日本語</a>
 </div>
 
 </header>
 
 <div id="contents">
 
-<main class="home-main">
+<main>
 
-<aside id="mainimg" class="home-hero">
-    <img src="/images/indeximage-banner-v5.png" alt="ESS electrodes and energy technology extending from Sagamihara to the United States">
-    <p class="home-hero-copy">Powering a Sustainable Future through Energy and Digital Innovation.</p>
-</aside>
+<section>
+
+<h2>Business Partners</h2>
+
+<p class="partner-intro">We value trust and collaboration. Meet the partners working with us to build a sustainable energy future.</p>
+
+<ul class="partner-list">
+    <li>
+        <a href="https://www.aesc-group.com/en/" target="_blank" rel="noopener noreferrer">
+            <span class="partner-logo">
+                <img src="/images/partner-logo-aesc.svg" alt="AESC logo">
+            </span>
+            <span class="partner-name">AESC Japan Ltd.</span>
+        </a>
+    </li>
+</ul>
+
+
+<figure class="partner-visual">
+    <img src="/images/partners-handshake.png" alt="A handshake representing trust and collaboration in sustainable energy">
+</figure>
+
+</section>
 
 </main>
 
-<!-- Collapsible menu -->
+<!-- 開閉ブロック -->
 <div id="menubar">
 
 <h3>MENU</h3>
 
 <nav id="common-menu">
-<!-- The menu is defined in /english/menu.html. -->
+<!-- MENUはmenu.htmlで定義 -->
 </nav>
 
 </div>
@@ -114,7 +175,7 @@
 </div>
 <!-- /#container -->
 
-<div class="pagetop"><a href="#" aria-label="Back to top">▲</a></div>
+<div class="pagetop"><a href="#">▲</a></div>
 
 <div id="menubar_hdr">
 <div class="menu-icon">
@@ -148,3 +209,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+

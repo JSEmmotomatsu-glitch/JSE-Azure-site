@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Business | Japan Smart Energy G.K.</title>
+<!-- ▼ 後日、一般公開するときはこの1行を丸ごと削除する ▼ -->
+<meta name="robots" content="noindex">
+<!-- ▲ ここまで ▲ -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Japan Smart Energy G.K. operates an electrode manufacturing and sales business for energy storage systems (ESS), along with smart city and IT solutions services.">
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/english/english.css">
+</head>
+
+<body>
+
+
+<div id="container">
+
+<header>
+
+<div id="logo" style="margin: 0; padding: 0; display: flex; align-items: center; gap: 15px; width: 100%;">
+    <!-- ロゴマーク -->
+    <a href="/english/" style="display: block; line-height: 0;">
+        <img src="/images/logo.png" alt="Japan Smart Energy logo" style="height: 52px; width: auto; display: block;">
+    </a>
+    
+<!-- 会社名テキスト -->
+<h1 style="margin: 0; padding: 0; font-size: 1.7rem; font-weight: 700; line-height: 1.35; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; letter-spacing: 0.02em; text-align: left;">
+    <a href="/english/" style="text-decoration: none; color: #ffffff; display: block; text-align: left;">
+        Japan Smart Energy G.K.
+    </a>
+</h1>
+    <a class="language-switch" href="/service/" lang="ja">日本語</a>
+</div>
+
+</header>
+
+<div id="contents">
+
+
+<main>
+
+<section>
+
+<h2>Business</h2>
+
+<div class="list-normal">
+
+<div class="list">
+    <figure>
+        <img src="/images/service-ess-electrode.png"
+             alt="Electrodes for energy storage systems">
+    </figure>
+
+    <div class="text">
+        <h4>Electrode Manufacturing for Energy Storage Systems (ESS)</h4>
+        <p>Based in Sagamihara, Kanagawa Prefecture, we manufacture and sell high-quality positive and negative electrode sheets, key components of energy storage systems (ESS). Through our manufacturing collaboration with AESC Japan and sales to Fluence in the United States, we are working to build a stable foundation for this business.</p>
+    </div>
+</div>
+
+<div class="list">
+    <figure>
+        <img src="/images/service-smart-city-it.png"
+             alt="Smart city and IT solutions">
+    </figure>
+
+    <div class="text">
+        <h4>Smart City &amp; IT Solutions</h4>
+        <p>Drawing on expertise developed since our predecessor, SmartCityConsulting, we provide consulting and IT system development services for next-generation urban development, smart homes, smart agriculture, logistics, healthcare technology, and related fields. We also provide flexible business support tailored to diverse needs, including digital transformation initiatives and telecommunications infrastructure development.</p>
+    </div>
+</div>
+
+
+
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!--開閉ブロック-->
+<div id="menubar">
+
+<h3>MENU</h3>
+
+<nav id="common-menu">
+<!-- MENUはmenu.htmlで定義 -->
+</nav>
+
+</div>
+<!--/#menubar-->
+
+
+</div>
+<!--/#contents-->
+
+
+<footer>
+<small>Copyright&copy; <a href="/english/">Japan Smart Energy G.K.</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+
+</div>
+<!--/#container-->
+
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#">▲</a></div>
+
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<div class="menu-icon">
+<span></span><span></span><span></span>
+</div>
+</div>
+
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<!--このテンプレート専用のスクリプト-->
+<script src="/js/main.js"></script>
+
+<!-- ▼ ここから下を貼り付けます ▼ -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const menuArea = document.getElementById("common-menu");
+    if (menuArea) {
+        fetch("/english/menu.html")
+            .then(response => response.text())
+            .then(data => {
+                menuArea.innerHTML = data;
+            });
+    }
+});
+</script>
+<!-- ▲ ここまで ▲ -->
+
+
+</body>
+</html>
+
