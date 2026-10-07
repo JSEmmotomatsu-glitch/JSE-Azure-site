@@ -92,3 +92,11 @@
         width: 100%;
     }
 }
+
+.vision-content .philosophy-copy {
+    font-weight: 500;
+    line-height: 1.8;
+}
+.philosophy-copy strong {
+    font-weight: 700;
+}
