@@ -1,0 +1,94 @@
+.vision-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 360px;
+    border-radius: 6px;
+    background: #0b2211;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+.vision-hero .vision-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60% !important;
+    height: 100% !important;
+    object-fit: cover;
+    filter: brightness(90%);
+}
+.vision-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #0b2211 0%, #0b2211 35%, rgba(11, 34, 17, 0.75) 55%, transparent 85%);
+}
+.vision-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 360px;
+    padding: 32px 5%;
+    box-sizing: border-box;
+}
+.vision-content h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    border: 0;
+    color: #e0e8e3;
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-shadow: 2px 2px 0 #000, 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+.vision-content h2 span {
+    display: block;
+    margin-top: 4px;
+    color: #a1b5a9;
+    font-size: 0.35em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+.vision-content .vision-copy {
+    width: 48%;
+    margin: 0;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border-bottom: 2px solid #b5b5b5;
+    background: linear-gradient(180deg, #fff, #e0e0e0);
+    color: #112618;
+    font-size: clamp(0.95rem, 2vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.65;
+    white-space: normal;
+    overflow-wrap: break-word;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), inset 0 1px 0 #fff;
+}
+.vision-hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 40%;
+    height: 3px;
+    background: #00ff80;
+    box-shadow: 0 0 12px #00ff80;
+}
+.vision-note {
+    margin: 8px 0 0;
+    color: #aaa;
+    font-size: 0.7rem;
+    text-align: right;
+    line-height: 1.4;
+}
+@media screen and (max-width: 900px) {
+    .vision-content {
+        padding: 28px 20px;
+    }
+    .vision-content .vision-copy {
+        width: 100%;
+    }
+}
